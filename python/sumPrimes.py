@@ -15,8 +15,9 @@ def IsPrime(x):
 
 sum=2
 
+# Modified 2 MIL to 200 K
 
-for i in range(3,2000000):
+for i in range(3,200000):
 
     if IsPrime(i):
 
