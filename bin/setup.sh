@@ -24,38 +24,6 @@ error() { echo -e " $1 "; }
 #warn()  { echo -e "\e[48;5;202m ${1^^} \e[0m ${@:2}" >&2; } # $1 uppercase background orange
 #error() { echo -e "\e[48;5;196m ${1^^} \e[0m ${@:2}" >&2; } # $1 uppercase background red
 
-#######################
-## Cluster Apply Config
-#######################
-
-# apply kubectl EKS configuration
-cluster-apply-config() {
-    # check if data.mapUsers is configured (return something if data.mapUsers is configured, otherwise return nothing)
-    local exists=$(yq read aws-auth-configmap.yaml data.mapUsers)
-    [[ -z "$exists" ]] && { error abort data.mapUsers not configured in aws-auth-configmap.yaml; return; }
-
-    log '--> apply aws-auth-configmap.yaml'
-    kubectl -n kube-system apply -f aws-auth-configmap.yaml
-
-    log ' test kubectl get ns'
-    source "$dir/.env"
-    export AWS_ACCESS_KEY_ID
-    export AWS_SECRET_ACCESS_KEY
-    kubectl --kubeconfig kubeconfig.yaml get ns
-}
-
-######################
-## Delete EKS Cluster
-######################
-
-# delete the EKS cluster
-cluster-delete() {
-    eksctl delete cluster \
-        --name $PROJECT_NAME \
-        --region $AWS_REGION \
-        --profile $AWS_PROFILE
-}
-
 
 ###############
 ## Create Env
@@ -131,31 +99,6 @@ create-env() {
     info created file .env
 }
 
-########### 
-## EKSCTL
-###########
-# install eksctl if missing (no update)
-install-eksctl() {
-    if [[ -z $(which eksctl) ]]
-    then
-        log 'install eksctl'
-        warn warn sudo is required
-        sudo wget -q -O - https://api.github.com/repos/weaveworks/eksctl/releases \
-            | jq --raw-output 'map( select(.prerelease==false) | .assets[].browser_download_url ) | .[]' \
-            | grep inux \
-            | head -n 1 \
-            | wget -q --show-progress -i - -O - \
-            | sudo tar -xz -C /usr/local/bin
-
-        # bash completion
-        [[ -z $(grep eksctl_init_completion ~/.bash_completion 2>/dev/null) ]] \
-            && eksctl completion bash >> ~/.bash_completion
-    else
-        log 'skip eksctl already installed'
-    fi
-}
-
-
 ###########
 ## yq
 ###########
@@ -176,7 +119,6 @@ install-yq() {
     fi
 }
 
-
 under() {
     local arg=$1
     #shift
@@ -188,6 +130,20 @@ usage() {
     under usage 'call the Makefile directly: make dev
       or invoke this file directly: ./make.sh dev'
 }
+
+###########
+## AWS IAM 
+###########
+installAWSIAMauth () {
+
+    if [[ -z $(which aws-iam-authenticator) ]]
+    then
+        brew install aws-iam-authenticator
+    else 
+        log " --> aws-iam-authenticator already installed"
+    fi
+}
+
 
 ##########
 ## EKSCTL 
@@ -205,7 +161,6 @@ installEKSCTL () {
 ##########
 ## GH  
 ##########
-
 installGH () {
 
     if [[ -z $(which gh) ]]
@@ -219,7 +174,6 @@ installGH () {
 ##########
 ## JQ  
 ##########
-
 installJQ () {
 
     if [[ -z $(which jq) ]]
@@ -230,11 +184,20 @@ installJQ () {
     fi
 }
 
+installKEEPASS() {
+    # brew install --cask keepassxc
+    if [[ -z $(which keepassxc) ]]
+    then
+        brew install --cask keepassxc
+    else
+        log " --> keepassxc already installed."
+    fi
+}
+
 
 ###########
 ## KUBECTL  
 ###########
-
 installKUBECTL () {
 
     if [[ -z $(which kubectl) ]]
@@ -245,6 +208,19 @@ installKUBECTL () {
     fi
 }
 
+############
+## PYTHON 
+############
+
+installPYTHON () {
+
+    if [[ -z $(which python) ]]
+    then
+        brew install python
+    else
+        log " --> python already installed."
+    fi
+}
 
 ############
 ## TERRAFORM 
@@ -262,10 +238,13 @@ installTERRAFORM () {
 
 installs () {
 
+    installAWSIAMauth
     installEKSCTL
     installGH
     installJQ
+    installKEEPASS
     installKUBECTL
+    installPYTHON
     installTERRAFORM
 }
 
