@@ -236,6 +236,19 @@ installTERRAFORM () {
     fi
 }
 
+installMINIKUBE ()
+{
+    brew install hyperkit
+
+    if [[ -z $(which minikube) ]]
+    then
+        brew install minikube
+    else
+        log " --> minikube already installed."
+    fi
+
+}
+
 installs () {
 
     installAWSIAMauth
@@ -244,6 +257,7 @@ installs () {
     installJQ
     installKEEPASS
     installKUBECTL
+    installMINIKUBE
     installPYTHON
     installTERRAFORM
 }
