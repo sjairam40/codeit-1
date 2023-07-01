@@ -243,7 +243,7 @@ installITERM () {
 
     if [[ -z $(which iterm2) ]]
     then
-        echo ' ----> installing iterm2 '
+        echo ' ----> installing iterm2 ' | tee -a ~/install.log
         brew install --cask iterm2
     else
         log " --> iterm2 already installed." | tee ~/install.log
@@ -257,10 +257,10 @@ installJQ () {
 
     if [[ -z $(which jq) ]]
     then
-        echo ' ----> installing jq '
+        echo ' ----> installing jq ' | tee -a ~/install.log
         brew install jq
     else
-        log " --> jq already installed."
+        log " --> jq already installed." | tee -a ~/install.log
     fi
 }
 
@@ -271,10 +271,10 @@ installKEEPASS() {
     # brew install --cask keepassxc
     if [[ -z $(which keepassxc) ]]
     then
-        echo ' ----> installing keepassxc '
+        echo ' ----> installing keepass ' | tee -a ~/install.log
         brew install --cask keepassxc
     else
-        log " --> keepassxc already installed."
+        log " --> keepassxc already installed." | tee -a ~/install.log
     fi
 }
 
@@ -285,11 +285,27 @@ installKUBECTL () {
 
     if [[ -z $(which kubectl) ]]
     then
-        echo ' ----> installing kubectl '
+        echo ' ----> installing kubectl ' | tee -a ~/install.log
         brew install kubectl
     else
-        log " --> kubectl already installed." | tee ~/install.log
+        log " --> kubectl already installed." | tee -a ~/install.log
     fi
+}
+
+#################
+## LITTLE-SNITCH 
+#################
+installLITTLESNITCH ()
+{
+
+    if [[ -z $(which minikube) ]]
+    then
+        echo ' ----> installing little snitch ' | tee -a ~/install.log
+        brew install --cask little-snitch
+    else
+        log " --> minikube already installed." | tee -a ~/install.log
+    fi
+
 }
 
 ############
@@ -297,15 +313,19 @@ installKUBECTL () {
 ############
 installMINIKUBE ()
 {
-    brew install hyperkit
-
-    if [[ -z $(which minikube) ]]
+    if [[ -z $(which hyperkit) ]]
     then
-        brew install minikube
+        echo ' ----> installing hyperkit ' | tee -a ~/install.log
+        brew install hyperkit
     else
-        log " --> minikube already installed." | tee ~/install.log
+        if [[ -z $(which minikube) ]]
+        then
+            echo ' ----> installing minkube ' | tee -a ~/install.log
+            brew install minikube
+        else
+            log " --> minikube already installed." | tee -a ~/install.log
+        fi
     fi
-
 }
 
 ###########
@@ -315,10 +335,10 @@ installPOSTMAN () {
         
     if [[ -z $(which postman) ]]
     then
-        echo ' ----> installing postman '
+        echo ' ----> installing postman ' | tee -a ~/install.log
         brew install --cask postman
     else
-        log " --> postman already installed ! "
+        log " --> postman already installed ! " | tee -a ~/install.log
     fi
 }
 
@@ -329,10 +349,10 @@ installPYTHON () {
 
     if [[ -z $(which python) ]]
     then
-        echo ' ----> installing python '
+        echo ' ----> installing python ' | tee -a ~/install.log
         brew install python
     else
-        log " --> python already installed."
+        log " --> python already installed." | tee -a ~/install.log
     fi
 }
 
@@ -343,10 +363,10 @@ installTERRAFORM () {
 
     if [[ -z $(which terraform) ]]
     then
-        echo ' ----> installing terraform '
+        echo ' ----> installing terraform ' | tee -a ~/install.log
         brew install terraform
     else
-        log " --> terraform already installed."
+        log " --> terraform already installed." | tee -a ~/install.log
     fi
 }
 
@@ -357,10 +377,10 @@ installVLC () {
         
     if [[ -z $(which vlc) ]]
     then
-        echo ' ----> installing vlc '
+        echo ' ----> installing vlc ' | tee -a ~/install.log
         brew install --cask vlc
     else
-        log " --> vlc already installed ! " >>  tee ~/install.log
+        log " --> vlc already installed ! " | tee -a ~/install.log
     fi
 }
 
@@ -371,10 +391,10 @@ installZOOM () {
         
     if [[ -z $(which zoom) ]]
     then
-        echo ' ----> installing zoom '
+        echo ' ----> installing zoom ' | tee -a ~/install.log
         brew install --cask zoom
     else
-        log " --> zoom already installed ! "
+        log " --> zoom already installed ! " | tee -a ~/install.log
     fi
 }
 
@@ -425,9 +445,11 @@ echo ' -- > Starting '
 
 if [[ -z $(which brew) ]]
     then
-        echo ' ----> installing Homebrew '
+        echo ' ----> installing Homebrew ' | tee -a ~/install.log
         installBREW
     else
-        echo  " ----> commencing installs ! "
+        echo  " ----> Commencing installs ! " | tee -a ~/install.log
+        sleep 5
         installs
+        echo ' ----> COMPLETE !!  ' | tee -a ~/install.log
 fi
