@@ -209,6 +209,20 @@ installHELM () {
 }
 
 ##########
+## ITERM  
+##########
+installITERM () {
+
+    if [[ -z $(which iterm2) ]]
+    then
+        echo ' ----> installing iterm2 '
+        brew install --cask iterm2
+    else
+        log " --> iterm2 already installed."
+    fi
+}
+
+##########
 ## JQ  
 ##########
 installJQ () {
@@ -358,6 +372,7 @@ installs () {
     installDOCKER
     installEKSCTL
     installGH
+    installITERM
     installJQ
     installKEEPASS
     installKUBECTL
