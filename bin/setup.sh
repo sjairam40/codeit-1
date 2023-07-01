@@ -117,10 +117,10 @@ installAUTHY () {
 
     if [[ -z $(which authy) ]]
     then
-        echo ' ----> installing authy '
+        echo ' ----> installing authy '  | tee -a ~/install.log
         brew install --cask authy
     else 
-        log " --> authy already installed"
+        log " --> authy already installed" | tee -a ~/install.log
     fi
 }
 
@@ -131,10 +131,10 @@ installAWSIAMauth () {
 
     if [[ -z $(which aws-iam-authenticator) ]]
     then
-        echo ' ----> installing aws-iam-authenticator '
+        echo ' ----> installing aws-iam-authenticator ' | tee -a ~/install.log
         brew install aws-iam-authenticator
     else 
-        log " --> aws-iam-authenticator already installed"
+        log " --> aws-iam-authenticator already installed" | tee -a ~/install.log
     fi
 }
 
@@ -145,10 +145,10 @@ installDRAWIO () {
         
     if [[ -z $(which drawio) ]]
     then
-        echo ' ----> installing drawio '
+        echo ' ----> installing drawio ' | tee -a ~/install.log
         brew install --cask drawio
     else
-        log " --> drawio already installed ! "
+        log " --> drawio already installed ! " | tee -a ~/install.log
     fi
 }
 
@@ -159,10 +159,10 @@ installDOCKER () {
         
     if [[ -z $(which docker) ]]
     then
-        echo ' ----> installing docker '
+        echo ' ----> installing docker ' >> ~/install.log
         brew install --cask docker
     else
-        log " --> docker already installed ! "
+        log " --> docker already installed ! " | tee -a ~/install.log
     fi
 }
 
@@ -173,10 +173,10 @@ installEKSCTL () {
 
     if [[ -z $(which eksctl) ]]
     then
-        echo ' ----> installing eksctl  '
+        echo ' ----> installing eksctl  ' | tee -a ~/install.log
         brew install eksctl 
     else 
-        log " --> eksctl already installed"
+        log " --> eksctl already installed" | tee -a ~/install.log
     fi
 }
 
@@ -187,10 +187,10 @@ installFIREFOX () {
 
     if [[ -z $(which firefox) ]]
     then
-        echo ' ----> installing firefox  ' | tee ~/install.log
+        echo ' ----> installing firefox  ' | tee -a ~/install.log
         brew install --cask firefox
     else 
-        log " --> firefox already installed"
+        log " --> firefox already installed" | tee -a ~/install.log
     fi
 }
 
@@ -201,10 +201,24 @@ installGH () {
 
     if [[ -z $(which gh) ]]
     then
-        echo ' ----> installing gh '
+        echo ' ----> installing gh ' | tee -a ~/install.log
         brew install gh
     else
-        log " --> gh already installed."
+        log " --> gh already installed." | tee -a ~/install.log
+    fi
+}
+
+#############
+## HANDBRAKE
+#############
+installHANDBRAKE () {
+
+    if [[ -z $(which handbrake) ]]
+    then
+        echo ' ----> installing handbrake ' | tee -a ~/install.log
+        brew install --cask handbrake
+    else
+        log " --> handbrake already installed." | tee -a ~/install.log
     fi
 }
 
@@ -215,10 +229,10 @@ installHELM () {
 
     if [[ -z $(which helm) ]]
     then
-        echo ' ----> installing helm '
+        echo ' ----> installing helm ' | tee -a ~/install.log
         brew install helm
     else
-        log " --> helm already installed."
+        log " --> helm already installed." | tee -a ~/install.log
     fi
 }
 
@@ -232,7 +246,7 @@ installITERM () {
         echo ' ----> installing iterm2 '
         brew install --cask iterm2
     else
-        log " --> iterm2 already installed."
+        log " --> iterm2 already installed." | tee ~/install.log
     fi
 }
 
@@ -274,7 +288,7 @@ installKUBECTL () {
         echo ' ----> installing kubectl '
         brew install kubectl
     else
-        log " --> kubectl already installed."
+        log " --> kubectl already installed." | tee ~/install.log
     fi
 }
 
@@ -289,7 +303,7 @@ installMINIKUBE ()
     then
         brew install minikube
     else
-        log " --> minikube already installed."
+        log " --> minikube already installed." | tee ~/install.log
     fi
 
 }
@@ -346,7 +360,7 @@ installVLC () {
         echo ' ----> installing vlc '
         brew install --cask vlc
     else
-        log " --> vlc already installed ! "
+        log " --> vlc already installed ! " >>  tee ~/install.log
     fi
 }
 
@@ -387,6 +401,7 @@ installs () {
     installEKSCTL
     installFIREFOX
     installGH
+    installHANDBRAKE
     installITERM
     installJQ
     installKEEPASS
