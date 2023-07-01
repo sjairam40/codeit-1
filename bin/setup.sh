@@ -181,6 +181,20 @@ installEKSCTL () {
 }
 
 ##########
+## FIREFOX 
+##########
+installFIREFOX () {
+
+    if [[ -z $(which firefox) ]]
+    then
+        echo ' ----> installing firefox  ' | tee ~/install.log
+        brew install --cask firefox
+    else 
+        log " --> firefox already installed"
+    fi
+}
+
+##########
 ## GH  
 ##########
 installGH () {
@@ -371,6 +385,7 @@ installs () {
     installDRAWIO
     installDOCKER
     installEKSCTL
+    installFIREFOX
     installGH
     installITERM
     installJQ
@@ -384,7 +399,6 @@ installs () {
     installVLC
     installZOOM
 }
-
 
 #########
 ## MAIN 
