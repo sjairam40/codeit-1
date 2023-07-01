@@ -138,12 +138,26 @@ installAWSIAMauth () {
 
     if [[ -z $(which aws-iam-authenticator) ]]
     then
+        echo ' ----> installing aws-iam-authenticator '
         brew install aws-iam-authenticator
     else 
         log " --> aws-iam-authenticator already installed"
     fi
 }
 
+##########
+## DOCKER 
+##########
+installDOCKER () {
+        
+    if [[ -z $(which docker) ]]
+    then
+        echo ' ----> installing docker '
+        brew install --cask docker
+    else
+        log " --> docker already installed ! "
+    fi
+}
 
 ##########
 ## EKSCTL 
@@ -152,6 +166,7 @@ installEKSCTL () {
 
     if [[ -z $(which eksctl) ]]
     then
+        echo ' ----> installing eksctl  '
         brew install eksctl 
     else 
         log " --> eksctl already installed"
@@ -165,9 +180,24 @@ installGH () {
 
     if [[ -z $(which gh) ]]
     then
+        echo ' ----> installing gh '
         brew install gh
     else
         log " --> gh already installed."
+    fi
+}
+
+##########
+## HELM
+##########
+installHELM () {
+
+    if [[ -z $(which helm) ]]
+    then
+        echo ' ----> installing helm '
+        brew install helm
+    else
+        log " --> helm already installed."
     fi
 }
 
@@ -178,22 +208,26 @@ installJQ () {
 
     if [[ -z $(which jq) ]]
     then
+        echo ' ----> installing jq '
         brew install jq
     else
         log " --> jq already installed."
     fi
 }
 
+#############
+## KEEPASSXC
+#############
 installKEEPASS() {
     # brew install --cask keepassxc
     if [[ -z $(which keepassxc) ]]
     then
+        echo ' ----> installing keepassxc '
         brew install --cask keepassxc
     else
         log " --> keepassxc already installed."
     fi
 }
-
 
 ###########
 ## KUBECTL  
@@ -202,6 +236,7 @@ installKUBECTL () {
 
     if [[ -z $(which kubectl) ]]
     then
+        echo ' ----> installing kubectl '
         brew install kubectl
     else
         log " --> kubectl already installed."
@@ -209,33 +244,8 @@ installKUBECTL () {
 }
 
 ############
-## PYTHON 
+## MINKUBE 
 ############
-
-installPYTHON () {
-
-    if [[ -z $(which python) ]]
-    then
-        brew install python
-    else
-        log " --> python already installed."
-    fi
-}
-
-############
-## TERRAFORM 
-############
-
-installTERRAFORM () {
-
-    if [[ -z $(which terraform) ]]
-    then
-        brew install terraform
-    else
-        log " --> terraform already installed."
-    fi
-}
-
 installMINIKUBE ()
 {
     brew install hyperkit
@@ -249,17 +259,79 @@ installMINIKUBE ()
 
 }
 
-installs () {
+############
+## PYTHON 
+############
+installPYTHON () {
 
+    if [[ -z $(which python) ]]
+    then
+        echo ' ----> installing python '
+        brew install python
+    else
+        log " --> python already installed."
+    fi
+}
+
+############
+## TERRAFORM 
+############
+installTERRAFORM () {
+
+    if [[ -z $(which terraform) ]]
+    then
+        echo ' ----> installing terraform '
+        brew install terraform
+    else
+        log " --> terraform already installed."
+    fi
+}
+
+installBREW () {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+
+
+installGITHUB () {
+        
+    if [[ -z $(which github) ]]
+    then
+        echo ' ----> installing github '
+        brew install --cask github
+    else
+        log " --> github already installed ! "
+    fi
+}
+
+########
+## ZOOM
+########
+installZOOM () {
+        
+    if [[ -z $(which zoom) ]]
+    then
+        echo ' ----> installing zoom '
+        brew install --cask zoom
+    else
+        log " --> zoom already installed ! "
+    fi
+}
+
+
+installs () {
     installAWSIAMauth
+    installDOCKER
     installEKSCTL
     installGH
     installJQ
     installKEEPASS
     installKUBECTL
+    installHELM
     installMINIKUBE
     installPYTHON
     installTERRAFORM
+    installZOOM
 }
 
 
@@ -271,4 +343,11 @@ clear
 sleep 5
 echo ' -- > Starting '
 
-installs
+if [[ -z $(which brew) ]]
+    then
+        echo ' ----> installing Homebrew '
+        installBREW
+    else
+        echo  " --> commencing installs ! "
+        installs
+fi
