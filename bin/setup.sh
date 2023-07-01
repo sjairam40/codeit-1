@@ -124,7 +124,6 @@ installAUTHY () {
     fi
 }
 
-
 ###########
 ## AWS IAM 
 ###########
@@ -136,6 +135,20 @@ installAWSIAMauth () {
         brew install aws-iam-authenticator
     else 
         log " --> aws-iam-authenticator already installed"
+    fi
+}
+
+##########
+## DRAWIO 
+##########
+installDRAWIO () {
+        
+    if [[ -z $(which drawio) ]]
+    then
+        echo ' ----> installing drawio '
+        brew install --cask drawio
+    else
+        log " --> drawio already installed ! "
     fi
 }
 
@@ -281,9 +294,9 @@ installPYTHON () {
     fi
 }
 
-############
+#############
 ## TERRAFORM 
-############
+#############
 installTERRAFORM () {
 
     if [[ -z $(which terraform) ]]
@@ -292,19 +305,6 @@ installTERRAFORM () {
         brew install terraform
     else
         log " --> terraform already installed."
-    fi
-}
-
-
-
-installGITHUB () {
-        
-    if [[ -z $(which github) ]]
-    then
-        echo ' ----> installing github '
-        brew install --cask github
-    else
-        log " --> github already installed ! "
     fi
 }
 
@@ -336,16 +336,25 @@ installZOOM () {
     fi
 }
 
+installGITHUB () {
+        
+    if [[ -z $(which github) ]]
+    then
+        echo ' ----> installing github '
+        brew install --cask github
+    else
+        log " --> github already installed ! "
+    fi
+}
 
 installBREW () {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
-
-
 installs () {
     installAUTHY
     installAWSIAMauth
+    installDRAWIO
     installDOCKER
     installEKSCTL
     installGH
