@@ -19,83 +19,40 @@ info()  { echo -e " $1 "; }      # $1 uppercase background green
 warn()  { echo -e " $1 "; }
 error() { echo -e " $1 "; }
 
+info() {
+  printf "\r\033[00;35m$1\033[0m\n"
+}
+
+success() {
+  printf "\r\033[00;32m$1\033[0m\n"
+}
+
+fail() {
+  printf "\r\033[0;31m$1\033[0m\n"
+}
+
 #log()   { echo -e "\e[30;47m ${1^^} \e[0m ${@:2}"; }        # $1 uppercase background white
 #info()  { echo -e "\e[48;5;28m ${1^^} \e[0m ${@:2}"; }      # $1 uppercase background green
 #warn()  { echo -e "\e[48;5;202m ${1^^} \e[0m ${@:2}" >&2; } # $1 uppercase background orange
 #error() { echo -e "\e[48;5;196m ${1^^} \e[0m ${@:2}" >&2; } # $1 uppercase background red
 
-###############
-## Create Env
-###############
+####################
+## DEFAULT FUNCTION
+####################
 
-create-env() {
-    # log install site npm modules
-    cd "$dir/site"
-    npm install
+installAPP(){
+   # t stores $1 argument passed to installAPP
+    t=$1
+    echo " installAPP(): \$1 is $1"
 
-    [[ -f "$dir/.env" ]] && { log skip .env file already exists; return; }
-    info create .env file
-
-    # check if user already exists (return something if user exists, otherwise return nothing)
-    local exists=$(aws iam list-user-policies \
-        --user-name $PROJECT_NAME \
-        --profile $AWS_PROFILE \
-        2>/dev/null)
-        
-    [[ -n "$exists" ]] && { error abort user $PROJECT_NAME already exists; return; }
-
-    # create a user named $PROJECT_NAME
-    log 'create iam user '+$PROJECT_NAME
-    aws iam create-user \
-        --user-name $PROJECT_NAME \
-        --profile $AWS_PROFILE \
-        1>/dev/null
-
-    aws iam attach-user-policy \
-        --user-name $PROJECT_NAME \
-        --policy-arn arn:aws:iam::aws:policy/PowerUserAccess \
-        --profile $AWS_PROFILE
-
-    local key=$(aws iam create-access-key \
-        --user-name $PROJECT_NAME \
-        --query 'AccessKey.{AccessKeyId:AccessKeyId,SecretAccessKey:SecretAccessKey}' \
-        --profile $AWS_PROFILE \
-        2>/dev/null)
-
-    local AWS_ACCESS_KEY_ID=$(echo "$key" | jq '.AccessKeyId' --raw-output)
-    log 'AWS_ACCESS_KEY_ID' + $AWS_ACCESS_KEY_ID
-    
-    local AWS_SECRET_ACCESS_KEY=$(echo "$key" | jq '.SecretAccessKey' --raw-output)
-    log 'AWS_SECRET_ACCESS_KEY' + $AWS_SECRET_ACCESS_KEY
-
-    # create ECR repository
-    local repo=$(aws ecr describe-repositories \
-        --repository-names $PROJECT_NAME \
-        --region $AWS_REGION \
-        --profile $AWS_PROFILE \
-        2>/dev/null)
-    if [[ -z "$repo" ]]
+    if [[ -z $(which $1 ) ]]
     then
-        log 'ecr create-repository'+ $PROJECT_NAME
-        local ECR_REPOSITORY=$(aws ecr create-repository \
-            --repository-name $PROJECT_NAME \
-            --region $AWS_REGION \
-            --profile $AWS_PROFILE \
-            --query 'repository.repositoryUri' \
-            --output text)
-        log 'ECR_REPOSITORY '+ $ECR_REPOSITORY
+        info " ----> installing $1 " | tee -a ~/install.log
+        brew install --cask $1
+    else
+        info " ##>> $1  already installed ! " | tee -a ~/install.log
     fi
 
-    # envsubst tips : https://unix.stackexchange.com/a/294400
-    # create .env file
-    cd "$dir"
-    # export variables for envsubst
-    export AWS_ACCESS_KEY_ID
-    export AWS_SECRET_ACCESS_KEY
-    export ECR_REPOSITORY
-    envsubst < .env.tmpl > .env
-
-    info created file .env
 }
 
 under() {
@@ -110,17 +67,17 @@ usage() {
       or invoke this file directly: ./make.sh dev'
 }
 
-#########
-## AUTHY
-#########
-installAUTHY () {
+########################
+## ADOBE ACROBAT READER
+########################
+installADOBEREADER () {
 
-    if [[ -z $(which authy) ]]
+    if [[ -z $(which adobe-acrobat-reader) ]]
     then
-        echo ' ----> installing authy '  | tee -a ~/install.log
-        brew install --cask authy
+        echo ' ----> installing adobe-acrobat-reader '  | tee -a ~/install.log
+        brew install --cask adobe-acrobat-reader
     else 
-        log " --> authy already installed" | tee -a ~/install.log
+        info " --> adobe-acrobat-reader already installed" | tee -a ~/install.log
     fi
 }
 
@@ -134,21 +91,7 @@ installAWSIAMauth () {
         echo ' ----> installing aws-iam-authenticator ' | tee -a ~/install.log
         brew install aws-iam-authenticator
     else 
-        log " --> aws-iam-authenticator already installed" | tee -a ~/install.log
-    fi
-}
-
-##########
-## DRAWIO 
-##########
-installDRAWIO () {
-        
-    if [[ -z $(which drawio) ]]
-    then
-        echo ' ----> installing drawio ' | tee -a ~/install.log
-        brew install --cask drawio
-    else
-        log " --> drawio already installed ! " | tee -a ~/install.log
+        info " --> aws-iam-authenticator already installed" | tee -a ~/install.log
     fi
 }
 
@@ -159,10 +102,10 @@ installDOCKER () {
         
     if [[ -z $(which docker) ]]
     then
-        echo ' ----> installing docker ' >> ~/install.log
+        echo ' ----> installing docker ' | tee -a ~/install.log
         brew install --cask docker
     else
-        log " --> docker already installed ! " | tee -a ~/install.log
+        info " --> docker already installed ! " | tee -a ~/install.log
     fi
 }
 
@@ -181,20 +124,6 @@ installEKSCTL () {
 }
 
 ##########
-## FIREFOX 
-##########
-installFIREFOX () {
-
-    if [[ -z $(which firefox) ]]
-    then
-        echo ' ----> installing firefox  ' | tee -a ~/install.log
-        brew install --cask firefox
-    else 
-        log " --> firefox already installed" | tee -a ~/install.log
-    fi
-}
-
-##########
 ## GH  
 ##########
 installGH () {
@@ -205,20 +134,6 @@ installGH () {
         brew install gh
     else
         log " --> gh already installed." | tee -a ~/install.log
-    fi
-}
-
-#############
-## HANDBRAKE
-#############
-installHANDBRAKE () {
-
-    if [[ -z $(which handbrake) ]]
-    then
-        echo ' ----> installing handbrake ' | tee -a ~/install.log
-        brew install --cask handbrake
-    else
-        log " --> handbrake already installed." | tee -a ~/install.log
     fi
 }
 
@@ -246,7 +161,7 @@ installITERM () {
         echo ' ----> installing iterm2 ' | tee -a ~/install.log
         brew install --cask iterm2
     else
-        log " --> iterm2 already installed." | tee ~/install.log
+        log " --> iterm2 already installed." | tee -a ~/install.log
     fi
 }
 
@@ -370,20 +285,6 @@ installTERRAFORM () {
     fi
 }
 
-#######
-## VLC
-#######
-installVLC () {
-        
-    if [[ -z $(which vlc) ]]
-    then
-        echo ' ----> installing vlc ' | tee -a ~/install.log
-        brew install --cask vlc
-    else
-        log " --> vlc already installed ! " | tee -a ~/install.log
-    fi
-}
-
 ########
 ## ZOOM
 ########
@@ -397,6 +298,7 @@ installZOOM () {
         log " --> zoom already installed ! " | tee -a ~/install.log
     fi
 }
+
 
 installGITHUB () {
         
@@ -414,15 +316,16 @@ installBREW () {
 }
 
 installs () {
-    installAUTHY
+    #installADOBEREADER
+    installAPP authy
     installAWSIAMauth
-    installDRAWIO
+    installAPP drawio
     installDOCKER
     installEKSCTL
-    installFIREFOX
+    installAPP firefox
     installGH
-    installHANDBRAKE
-    installITERM
+    installAPP handbrake
+    installAPP iterm2
     installJQ
     installKEEPASS
     installKUBECTL
@@ -431,8 +334,9 @@ installs () {
     installPOSTMAN
     installPYTHON
     installTERRAFORM
-    installVLC
-    installZOOM
+    installAPP vlc
+    installAPP zoom
+    
 }
 
 #########
@@ -441,7 +345,7 @@ installs () {
 
 clear
 sleep 5
-echo ' -- > Starting '
+printf "\r\033[00;35;1m -- > Starting   \033[0m"
 
 if [[ -z $(which brew) ]]
     then
@@ -451,5 +355,5 @@ if [[ -z $(which brew) ]]
         echo  " ----> Commencing installs ! " | tee -a ~/install.log
         sleep 5
         installs
-        echo ' ----> COMPLETE !!  ' | tee -a ~/install.log
+        printf "\r\033[00;35;1m -- > COMPLETE   \033[0m" | tee -a ~/install.log
 fi
