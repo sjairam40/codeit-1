@@ -24,7 +24,6 @@ error() { echo -e " $1 "; }
 #warn()  { echo -e "\e[48;5;202m ${1^^} \e[0m ${@:2}" >&2; } # $1 uppercase background orange
 #error() { echo -e "\e[48;5;196m ${1^^} \e[0m ${@:2}" >&2; } # $1 uppercase background red
 
-
 ###############
 ## Create Env
 ###############
@@ -99,26 +98,6 @@ create-env() {
     info created file .env
 }
 
-###########
-## yq
-###########
-# install yq if missing (no update)
-install-yq() {
-    if [[ -z $(which yq) ]]
-    then
-        log 'install yq'
-        warn warn sudo is required
-        cd /usr/local/bin
-        sudo curl "https://github.com/mikefarah/yq/releases/download/3.4.1/yq_linux_amd64" \
-            --progress-bar \
-            --location \
-            --output yq
-        sudo chmod +x yq
-    else
-        log 'skip yq already installed'
-    fi
-}
-
 under() {
     local arg=$1
     #shift
@@ -130,6 +109,21 @@ usage() {
     under usage 'call the Makefile directly: make dev
       or invoke this file directly: ./make.sh dev'
 }
+
+#########
+## AUTHY
+#########
+installAUTHY () {
+
+    if [[ -z $(which authy) ]]
+    then
+        echo ' ----> installing authy '
+        brew install --cask authy
+    else 
+        log " --> authy already installed"
+    fi
+}
+
 
 ###########
 ## AWS IAM 
@@ -259,6 +253,20 @@ installMINIKUBE ()
 
 }
 
+###########
+## POSTMAN
+###########
+installPOSTMAN () {
+        
+    if [[ -z $(which postman) ]]
+    then
+        echo ' ----> installing postman '
+        brew install --cask postman
+    else
+        log " --> postman already installed ! "
+    fi
+}
+
 ############
 ## PYTHON 
 ############
@@ -287,10 +295,6 @@ installTERRAFORM () {
     fi
 }
 
-installBREW () {
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-}
-
 
 
 installGITHUB () {
@@ -301,6 +305,20 @@ installGITHUB () {
         brew install --cask github
     else
         log " --> github already installed ! "
+    fi
+}
+
+#######
+## VLC
+#######
+installVLC () {
+        
+    if [[ -z $(which vlc) ]]
+    then
+        echo ' ----> installing vlc '
+        brew install --cask vlc
+    else
+        log " --> vlc already installed ! "
     fi
 }
 
@@ -319,7 +337,14 @@ installZOOM () {
 }
 
 
+installBREW () {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+
+
 installs () {
+    installAUTHY
     installAWSIAMauth
     installDOCKER
     installEKSCTL
@@ -329,8 +354,10 @@ installs () {
     installKUBECTL
     installHELM
     installMINIKUBE
+    installPOSTMAN
     installPYTHON
     installTERRAFORM
+    installVLC
     installZOOM
 }
 
@@ -348,6 +375,6 @@ if [[ -z $(which brew) ]]
         echo ' ----> installing Homebrew '
         installBREW
     else
-        echo  " --> commencing installs ! "
+        echo  " ----> commencing installs ! "
         installs
 fi
