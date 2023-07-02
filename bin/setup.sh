@@ -62,6 +62,7 @@ installAPP(){
 installTOOLS(){
    # t stores $1 argument passed to installAPP
     t=$1
+
     if [ "${1}" = "minikube" ]
     then    
         info " --> minikube check ! "
@@ -96,16 +97,6 @@ installMINIKUBE () {
     fi
 }
 
-installGITHUB () {        
-    if [[ -z $(which github) ]]
-    then
-        echo ' ----> installing github '
-        brew install --cask github
-    else
-        log " --> github already installed ! "
-    fi
-}
-
 installBREW () {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
@@ -113,12 +104,8 @@ installBREW () {
 installFOR () {
 
     PROPS_LIST="$dir/toolList.txt"
-
-    info " -->  $PROPS_LIST "
-
     for server in `more ${PROPS_LIST}`
     do
-	    echo " ==> $server " | tee -a >> ~/install.log
         sleep 2
         installTOOLS $server
     done | column -t
@@ -126,9 +113,6 @@ installFOR () {
 
 installs () {
 
-    PROPS_LIST="$dir/toolList.txt"
-
-    info " -->  $PROPS_LIST "
     #installAPP adobe-acrobat-reader
     installTOOLS aws-iam-authenticator
     installTOOLS docker
@@ -137,10 +121,11 @@ installs () {
     installTOOLS jq
     installTOOLS kubectl
     installTOOLS helm
+    installTOOLS hyperkit
     installTOOLS minikube
     installTOOLS python@3.11
     installTOOLS terraform  
-    #installFOR
+    installFOR
     #installMINIKUBE
     
     installAPP authy
