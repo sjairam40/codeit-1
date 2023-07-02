@@ -1,0 +1,9 @@
+authy
+drawio
+firefox
+github
+handbrake
+iterm2
+keepassxc
+thonny
+vlc

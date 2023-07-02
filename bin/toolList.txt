@@ -1,9 +1,13 @@
 aws-iam-authenticator
 docker
 eksctl
+jetty
 gh
 jq
 kubectl
 helm
-python
+hyperkit
+minikube
+nvm
+python@3.11
 terraform

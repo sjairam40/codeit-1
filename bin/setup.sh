@@ -150,7 +150,9 @@ clear
 # the directory containing the script file
 export dir="$(cd "$(dirname "$0")"; pwd)"
 
-info " dir : $dir "
+TOOL_LIST="$dir/toolList.txt"
+APP_LIST="$dir/appList.txt"
+
 sleep 2
 
 cd "$dir"
