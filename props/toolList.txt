@@ -1,0 +1,9 @@
+aws-iam-authenticator
+docker
+eksctl
+gh
+jq
+kubectl
+helm
+python
+terraform
