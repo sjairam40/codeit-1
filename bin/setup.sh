@@ -117,10 +117,10 @@ installs () {
     installTOOLS aws-iam-authenticator
     installTOOLS docker
     installTOOLS eksctl
-    installTOOLS gh
+    #installTOOLS gh
     installTOOLS jq
     installTOOLS kubectl
-    installTOOLS helm
+    #ßinstallTOOLS helm
     installTOOLS hyperkit
     installTOOLS minikube
     installTOOLS python@3.11

@@ -2,6 +2,7 @@ aws-iam-authenticator
 docker
 eksctl
 jetty
+git
 gh
 jq
 kubectl
