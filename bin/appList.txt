@@ -7,3 +7,4 @@ iterm2
 keepassxc
 thonny
 vlc
+zoom

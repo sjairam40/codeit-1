@@ -1,7 +1,7 @@
 aws-iam-authenticator
+aws-sam-cli
 docker
 eksctl
-jetty
 git
 gh
 jq
@@ -9,6 +9,8 @@ kubectl
 helm
 hyperkit
 minikube
+nmap
 nvm
 python@3.11
 terraform
+tree

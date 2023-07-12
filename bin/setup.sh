@@ -62,11 +62,6 @@ installAPP(){
 installTOOLS(){
    # t stores $1 argument passed to installAPP
     t=$1
-
-    if [ "${1}" = "minikube" ]
-    then    
-        info " --> minikube check ! "
-    fi
   
     if [[ -z $(which $1 ) ]]
     then
@@ -103,42 +98,60 @@ installBREW () {
 
 installFOR () {
 
-    PROPS_LIST="$dir/toolList.txt"
-    for server in `more ${PROPS_LIST}`
+    TOOLS_LIST="$dir/toolList.txt"
+    for tools in `more ${TOOLS_LIST}`
     do
         sleep 2
-        installTOOLS $server
+        installTOOLS $tools
     done | column -t
 }
+
+installAPPsFOR () {
+
+    APPS_LIST="$dir/appList.txt"
+    for app in `more ${APPS_LIST}`
+    do
+        sleep 2
+        if [[ -z $(which $app ) ]]
+        then
+            info " ----> installing $1 " | tee -a ~/install.log
+            brew install --cask $app       | tee -a ~/install.log
+        else
+            info " ==>> $app  already installed ! " | tee -a ~/install.log
+        fi
+    done | column -t
+}
+
 
 installs () {
 
     #installAPP adobe-acrobat-reader
-    installTOOLS aws-iam-authenticator
-    installTOOLS docker
-    installTOOLS eksctl
+    #installTOOLS aws-iam-authenticator
+    #installTOOLS docker
+    #installTOOLS eksctl
     #installTOOLS gh
-    installTOOLS jq
-    installTOOLS kubectl
-    #ßinstallTOOLS helm
-    installTOOLS hyperkit
-    installTOOLS minikube
-    installTOOLS python@3.11
-    installTOOLS terraform  
+    #installTOOLS jq
+    #installTOOLS kubectl
+    #installTOOLS helm
+    #installTOOLS hyperkit
+    #installTOOLS minikube
+    #installTOOLS python@3.11
+    #installTOOLS terraform  
     installFOR
     #installMINIKUBE
     
-    installAPP authy
-    installAPP drawio
-    installAPP firefox
-    installAPP github
-    installAPP handbrake
-    installAPP iterm2
-    installAPP keepassxc
+    #installAPP authy
+    #installAPP drawio
+    #installAPP firefox
+    #installAPP github
+    #installAPP handbrake
+    #installAPP iterm2
+    #installAPP keepassxc
     #installAPP postman
-    installAPP thonny
-    installAPP vlc
-    installAPP zoom
+    #installAPP thonny
+    #installAPP vlc
+    #installAPP zoom
+    installAPPsFOR
 }
 
 #########
