@@ -1,0 +1,1 @@
+dis ql(SYSTEM.*) where (curdepth gt 0)
