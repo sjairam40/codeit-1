@@ -1,45 +1,43 @@
-access.domesticandgeneral.com 
-access.whirlpool.com 
-accessq.whirlpool.com 
-api-prod.functions.copado.com 
-api.payment.aws.domgen-usa.com 
-api.paysafe.com 
-apilayer.net 
-connect.hubspan.net 
-dgusallc.semafone.cloud 
-diagnexia.com 
-domgen.net 
-emeaservices.cert.whirlpool.com 
-emeaservicesq.cert.whirlpool.com 
-hooks.imiconnect.io 
-investors.domesticandgeneral.com 
-partners.domgen.com 
-patholytix.com 
-portal.domesticandgeneral.org.au 
-pr.domesticandgeneral.com 
-privileg.register-appliance.com 
-providews.bevalued.co.uk 
-restconnect.vertexsmb.com 
-secure-test.worldpay.com 
-secure.worldpay.com 
-segurosoluciona.es 
-sit-providews.bevalued.co.uk 
-sts.domesticandgeneral.com 
-uat-providews.bevalued.co.uk 
-uat-validatorapi.bevalued.co.uk 
-uatwebsvcs.domesticandgeneral.com 
-uatws.domesticandgeneral.com 
-validatorapi.bevalued.co.uk 
-vpn.domesticandgeneral.com 
-websvcs.domesticandgeneral.com 
-ws.domesticandgeneral.com 
-www.ao-care.com 
-www.dev.domgen.net 
-www.dgportal.it 
-www.garanzia-domgen.it 
-www.maxigarantieonline.de 
-www.maxigarantieportal.de 
-www.myprotectplus.com 
-www.partnerprotectplus.com 
-www.registerhoover.com 
-www.skylinecms.co.uk 
+access.whirlpool.com 443
+accessq.whirlpool.com 443
+adddevice.skyprotect.com 443
+api.payment.aws.domgen-usa.com 443
+api.paysafe.com 443
+apilayer.net 443
+diagnexia.com 443
+domgen.net 443
+emeaservices.cert.whirlpool.com 443 
+emeaservicesq.cert.whirlpool.com 443
+hooks.imiconnect.io 443
+investors.domesticandgeneral.com 443 
+partners.domgen.com 443
+patholytix.com 443
+portal.domesticandgeneral.org.au 443 
+pr.domesticandgeneral.com 443
+privileg.register-appliance.com 443
+preprod.adddevice.skyprotect.com 443
+providews.bevalued.co.uk 443
+restconnect.vertexsmb.com 443
+secure-test.worldpay.com 443
+secure.worldpay.com 443
+segurosoluciona.es 443
+sit-providews.bevalued.co.uk 443 
+sts.domesticandgeneral.com 443
+uat-providews.bevalued.co.uk 443
+uat-validatorapi.bevalued.co.uk 443
+uatwebsvcs.domesticandgeneral.com 443
+uatws.domesticandgeneral.com 443
+validatorapi.bevalued.co.uk 443
+vpn.domesticandgeneral.com 443
+websvcs.domesticandgeneral.com 443 
+ws.domesticandgeneral.com 443
+www.ao-care.com 443
+www.dev.domgen.net 443
+www.dgportal.it 443
+www.garanzia-domgen.it 443
+www.maxigarantieonline.de 443
+www.maxigarantieportal.de 443
+www.myprotectplus.com 443
+www.partnerprotectplus.com 443 
+www.registerhoover.com 443
+www.skylinecms.co.uk 443
