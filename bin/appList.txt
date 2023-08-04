@@ -1,10 +1,11 @@
-authy
-drawio
-firefox
-github
-handbrake
-iterm2
-keepassxc
+adobe-acrobat-reader *
+authy *
+drawio 
+firefox *
+github *
+handbrake *
+iterm2 * 
+keepassxc *
 thonny
-vlc
-zoom
+vlc *
+zoom *

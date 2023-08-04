@@ -712,7 +712,7 @@ if [ ${macOS} = "TRUE" ]; then
         if [ ${DEBUG} = "TRUE" ]; then
             echo " --> if macOS : false "
         fi
-        REPORT_DIR=/was/dgadmin/logs/sslCheck
+        REPORT_DIR=/Users/jairams/was/dgadmin/logs/sslCheck
         tempFile=$dREPORT_DIRir/$file-$dateTime-A.csv
         LOGDIR=$REPORT_DIR/$file-$dateTime.csv
 

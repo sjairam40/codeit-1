@@ -1,10 +1,12 @@
+argocd *
 aws-iam-authenticator
-aws-sam-cli
-docker
+aws-sam-cli *
+docker * 
 eksctl
 git
 gh
 jq
+k9s
 kubectl
 helm
 hyperkit
