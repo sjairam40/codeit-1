@@ -547,14 +547,14 @@ usage()
 
 checkOS ()
 {
-    SYS=`uname -o 2>/dev/null`
 
-    if [ $? -eq 0 ]; then
+    if [[ $(uname -m) == 'arm64' ]]; then
+        echo " --> buenos dias, en macOS "
+        macOS="TRUE"
+    else
         echo " --> ola, en windows "
         macOS="FALSE"
-    else
-        echo " --> ola, en macOS "
-        macOS="TRUE"
+        
     fi
 }
 
