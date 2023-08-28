@@ -1,0 +1,54 @@
+# specify a directory to install
+cask_args appdir: '/Applications'
+
+# install packages
+tap 'homebrew/cask' || true
+# ACT plugin for GITHUB actions
+brew 'act'
+brew 'argocd'
+brew 'awscli'
+brew 'aws-iam-authenticator'
+brew 'aws-sam-cli'
+brew 'bash-completion'
+#brew 'docker'
+# EKSCTL for AWS for EKS (kubernetes)
+brew 'eksctl'
+brew 'fontconfig'
+# GIT command line for local repos and version control
+brew 'git'
+brew 'gh'
+# Need to install hyperkit before minikube (need minikube after docker)
+brew 'hyperkit'
+# JQ command line for JSON 
+brew 'jq'
+# KUBECTL from kubernetes.io
+brew 'k9s'
+brew 'kubectl'
+brew 'helm'
+brew 'minikube'
+brew 'nmap'
+brew 'node'
+brew 'nvm'
+# PYTHON preference to other langs
+brew 'python@3.11'
+# TERRAFORM for IAC
+brew 'terraform'
+brew 'tree'
+brew 'wget'
+##########
+## CASKS 
+##########
+cask 'authy'
+cask 'drawio'
+# cask 'dropbox'
+cask 'firefox'
+# GITHUB desktop for GitHub repos etc
+cask 'github'
+cask 'google-chrome'
+# HANDBRAKE for video conversion
+# cask 'handbrake'
+cask 'iterm2'
+cask 'keepassxc'
+# Depends on company:  cask 'slack'
+cask 'visual-studio-code'
+cask 'vlc'
