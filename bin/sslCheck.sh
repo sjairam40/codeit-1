@@ -39,7 +39,7 @@ QUIET="FALSE"
 SENDER=""
 
 # Number of days in the warning threshhold (cmdline: -x)
-WARNDAYS=30
+WARNDAYS=31
 
 #######################################
 ## Location of system binaries
