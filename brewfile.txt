@@ -31,6 +31,7 @@ brew 'node'
 brew 'nvm'
 # PYTHON preference to other langs
 brew 'python@3.11'
+brew 'redis'
 # TERRAFORM for IAC
 brew 'terraform'
 brew 'tree'
