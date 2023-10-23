@@ -48,6 +48,8 @@ cask 'github'
 cask 'google-chrome'
 # HANDBRAKE for video conversion
 # cask 'handbrake'
+# INTELLIJ
+cask 'intellij-idea-ce'
 cask 'iterm2'
 cask 'keepassxc'
 # Depends on company:  cask 'slack'
