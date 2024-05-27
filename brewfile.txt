@@ -41,7 +41,6 @@ brew 'wget'
 ##########
 cask 'authy'
 cask 'drawio'
-# cask 'dropbox'
 cask 'firefox'
 # GITHUB desktop for GitHub repos etc
 cask 'github'
