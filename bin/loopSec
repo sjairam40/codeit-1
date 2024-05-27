@@ -1,0 +1,14 @@
+
+#!/bin/bash
+
+ # List of Kubernetes resources 
+
+resources=("acorn" "aspace" "booklabeler" "curiosity" "dais" "drs" "fts" "hdforms" "hgl" "ids" "imgconv" "jstor" "jobmonitor" "librarycloud" "listview" "lts-pipelines" "mds" "mps" "mps-viewer" "mpsadm" "nrs" "nrsadm" "policy" "presto" "sds" "talkwithhollis")  
+# Iterate over each resource 
+
+for resource in "${resources[@]}"; 
+	do echo "--> Change NS:"
+	kubens "$resource"
+	echo "--> Dump secret"
+	kubectl get secret aws-secret -o yaml >> $resource-secret.yaml
+done
