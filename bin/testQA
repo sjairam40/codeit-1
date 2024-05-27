@@ -1,0 +1,13 @@
+#!/bin/bash
+
+websites=("https://booklabeler-qa.lib.harvard.edu" "https://curiosity-qa.lib.harvard.edu" "https://hgl-qa.lib.harvard.edu" "https://ids-qa.lib.harvard.edu" "https://jobmon-qa.lib.harvard.edu" "https://listview-qa.lib.harvard.edu" "https://nrs-qa.lib.harvard.edu/URN-3:HUL.OIS:101114808:MANIFEST:2:" "https://policyadmin-qa.lib.harvard.edu")
+
+for site in "${websites[@]}"
+
+do
+
+    status_code=$(curl -Is $site | head -n 1 | cut -d ' ' -f 2)
+
+    echo "$site: $status_code"
+
+done
