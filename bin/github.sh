@@ -42,7 +42,9 @@ git clone git@github.huit.harvard.edu:LTS/lts-pipelines-INFRA.git
 
 echo " --> M to Z"
 
-git clone git@github.huit.harvard.edu:LTS/mds-INFRA.git 
+git clone git@github.huit.harvard.edu:LTS/mds-INFRA.git
+
+git clone git@github.huit.harvard.edu:LTS/mps-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/talkwithhollis-INFRA.git
 
