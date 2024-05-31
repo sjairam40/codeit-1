@@ -46,6 +46,10 @@ git clone git@github.huit.harvard.edu:LTS/mds-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/mps-INFRA.git
 
+git clone git@github.huit.harvard.edu:LTS/mpsadm-INFRA.git
+
+git clone git@github.huit.harvard.edu:LTS/nrs-INFRA.git
+
 git clone git@github.huit.harvard.edu:LTS/talkwithhollis-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/viewer-INFRA.git
