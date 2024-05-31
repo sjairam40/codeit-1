@@ -54,6 +54,8 @@ git clone git@github.huit.harvard.edu:LTS/nrsadm-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/policy-INFRA.git
 
+git clone git@github.huit.harvard.edu:LTS/presto-INFRA.git
+
 git clone git@github.huit.harvard.edu:LTS/talkwithhollis-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/viewer-INFRA.git
