@@ -15,7 +15,7 @@ resources=("acorn" "aspace" "booklabeler" "curiosity" "dais" "drs" "etd" "fts" "
 # Iterate over each resource 
 
 for resource in "${resources[@]}"; 
-	do echo "--> Change NS:"
+	do echo "--> Change NS to: $resource"
 	kubens "$resource"
 	echo "--> Dump secret"
 	kubectl get secret aws-secret -o yaml >> $resource-secret.yaml
