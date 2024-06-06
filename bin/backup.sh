@@ -35,6 +35,10 @@ echo " --> Copying 5-QA"
 cp -R 5-QA* /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
+echo " --> Copying AMBIENT"
+cp -R AMB* /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
 echo " --> Copying ARGO"
 cp -R ARGO* /Volumes/Data2024/Documents-$month-2024/
 sleep 5
