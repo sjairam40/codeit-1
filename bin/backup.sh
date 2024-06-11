@@ -19,6 +19,14 @@ echo " --> Going to Docs"
 cd ~/Documents
 sleep 5
 
+echo " --> cp .kube "
+cp -R ~/.kube  /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
+echo " --> cp .ssh "
+cp -R ~/.ssh  /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
 echo " --> Copying 00-docs"
 cp -R 00-docs-00 /Volumes/Data2024/Documents-$month-2024/
 sleep 5
@@ -59,8 +67,8 @@ echo " --> Copy ISTIO"
 cp -R ISTIO* /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
-echo " --> Copy JURICA"
-cp -R JURICA* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copy J*"
+cp -R J* /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
 echo " --> Copy Orca"
