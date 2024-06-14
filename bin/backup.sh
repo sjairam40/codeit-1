@@ -47,6 +47,10 @@ echo " --> Copying 5-QA"
 cp -R 5-QA* /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
+echo " --> Copying 6-PROD"
+cp -R 6-PROD* /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
 echo " --> Copying A*"
 cp -R A* /Volumes/Data2024/Documents-$month-2024/
 sleep 5
