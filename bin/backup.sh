@@ -27,6 +27,10 @@ echo " --> cp .ssh "
 cp -R ~/.ssh  /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
+echo " --> cp passwords "
+cp -R ~/Password.kdb*  /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
 echo " --> Copying 00-docs"
 cp -R 00-docs-00 /Volumes/Data2024/Documents-$month-2024/
 sleep 5
