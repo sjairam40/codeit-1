@@ -19,6 +19,12 @@ echo " --> Going to Docs"
 cd ~/Documents
 sleep 5
 
+echo " --> cp shells "
+cp -R ~/.aliases  /Volumes/Data2024/Documents-$month-2024/
+cp -R ~/.bashrc  /Volumes/Data2024/Documents-$month-2024/
+cp -R ~/.zshrc  /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
 echo " --> cp .kube "
 cp -R ~/.kube  /Volumes/Data2024/Documents-$month-2024/
 sleep 5
@@ -28,7 +34,7 @@ cp -R ~/.ssh  /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
 echo " --> cp passwords "
-cp -R ~/Password.kdb*  /Volumes/Data2024/Documents-$month-2024/
+cp -R ~/Passwords.kdb*  /Volumes/Data2024/Documents-$month-2024/
 sleep 5
 
 echo " --> Copying 00-docs"
