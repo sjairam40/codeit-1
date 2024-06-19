@@ -11,6 +11,7 @@ DOCCO='Documents-$month-2024'
 if [ ! -d ${DOCCO} ]; 
 then
     mkdir Documents-$month-2024
+    mkdir Documents-$month-2024/Pictures
 else 
     echo " --> Folder exists"
 fi
@@ -95,9 +96,27 @@ sleep 5
 
 echo " --> Copy Zoom"
 cp -R Zoom* /Volumes/Data2024/Documents-$month-2024/
+sleep 5
 
 echo " --> Copy zz-home"
 cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
+sleep 5
 
 echo " --> Copy Installed"
 cp -R zz-installed* /Volumes/Data2024/Documents-$month-2024/
+sleep 5
+
+echo " --> Going to Pictures"
+cd ~/Pictures
+
+echo " --> Copy 00-personal"
+cp -R 00-personal* /Volumes/Data2024/Documents-$month-2024/Pictures
+sleep 5
+
+echo " --> Copy Background"
+cp -R Background* /Volumes/Data2024/Documents-$month-2024/Pictures
+sleep 5
+
+echo " --> Copy HARVARD"
+cp -R HARVARD* /Volumes/Data2024/Documents-$month-2024/Pictures
+sleep 5
