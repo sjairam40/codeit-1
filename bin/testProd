@@ -1,0 +1,13 @@
+#!/bin/bash
+
+websites=("https://cluster-console.prod.lib.harvard.edu" "https://deployment.prod.lib.harvard.edu" "https://logs.lib.harvard.edu/" "https://aspacepui-dev.lib.harvard.edu/" "https://booklabeler.lib.harvard.edu")
+
+for site in "${websites[@]}"
+
+do
+
+    status_code=$(curl -Is $site | head -n 1 | cut -d ' ' -f 2)
+
+    echo "$site: $status_code"
+
+done
