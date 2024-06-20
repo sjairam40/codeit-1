@@ -91,6 +91,10 @@ echo " --> Copy Orca"
 cp -R ORCA* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copy P*"
+cp -R P* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copy RKE"
 cp -R RKE* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
@@ -107,7 +111,7 @@ echo " --> Copy Installed"
 cp -R zz-installed* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Going to Pictures"
+echo " ###>> Going to Pictures"
 cd ~/Pictures
 sleep $timeSec
 
