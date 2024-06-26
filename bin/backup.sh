@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+start_time=$(date +%s)
+
 echo " --> Going to USB"
 cd /Volumes/Data2024/
 
@@ -126,3 +129,14 @@ sleep $timeSec
 echo " --> Copy HARVARD"
 cp -R HARVARD* /Volumes/Data2024/Documents-$month-2024/Pictures
 sleep $timeSec
+
+end_time=$(date +%s)
+
+elapsed_time=$(( end_time - start_time ))
+
+# Convert elapsed time to minutes and seconds
+elapsed_minutes=$(( elapsed_time / 60 ))
+elapsed_seconds=$(( elapsed_time % 60 ))
+
+# Output the result
+echo "Elapsed time: $elapsed_minutes minutes and $elapsed_seconds seconds"
