@@ -2,7 +2,7 @@
 # 01 - initial - sjairam
 # 02 - Add arn check
 # 03 - Add arn as parameter 1
-# 04 - Add AWS Clit - sjairam
+# 04 - Add AWS CLI - sjairam
 
 # If no ArN is provided this variable can be enabled:  List all load balancers and get their ARNs
 load_balancer_arns=$(aws elbv2 describe-load-balancers --query "LoadBalancers[*].LoadBalancerArn" --output text)
