@@ -7,6 +7,9 @@ cd TOOLS
 echo "  --> alertmanager "
 git clone git@github.com:prometheus/alertmanager.git
 
+echo " --> argocd"
+git clone git@github.com:argoproj/argo-cd.git
+
 echo " --> jaeger"
 git clone git@github.com:jaegertracing/jaeger.git
 
