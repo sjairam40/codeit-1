@@ -7,5 +7,5 @@ cd TOOLS
 echo "  --> alertmanager "
 git clone git@github.com:prometheus/alertmanager.git
 
-echo " --> ci-cd intro"
-
+echo " --> jaeger"
+git clone git@github.com:jaegertracing/jaeger.git
