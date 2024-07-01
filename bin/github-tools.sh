@@ -15,3 +15,6 @@ git clone git@github.com:jaegertracing/jaeger.git
 
 echo " --> popeye"
 git clone git@github.com:derailed/popeye.git
+
+echo " --> samber/prometheus"
+git clone git@github.com:samber/awesome-prometheus-alerts.git
