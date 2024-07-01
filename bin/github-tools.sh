@@ -9,3 +9,6 @@ git clone git@github.com:prometheus/alertmanager.git
 
 echo " --> jaeger"
 git clone git@github.com:jaegertracing/jaeger.git
+
+echo " --> popeye"
+git clone git@github.com:derailed/popeye.git
