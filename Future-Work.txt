@@ -1,0 +1,33 @@
+POST Prod changes
+=================
+
+Amazon MQ
+---------
+
+Remove old brokers after amalgamation.  ie JSTOR_QA_Rabbit
+
+ETD_QA_Rabbit
+JSTOR_QA_Rabbit
+MPS_QA_Rabbit
+
+ArgoCD
+-----
+Deploy 1 ArgoCD to manage multiple clustsers
+
+
+Certs
+-----
+Clean up old certs.  ie beta.curiosity.lib.harvard.edu
+
+beta.curiosity.lib.harvard.edu
+deployment.prod.lib.harvard.edu
+
+
+S3
+---
+Remove old or unused S3 buckets.  ie lts-rancher-backup-dev
+
+
+Secrets
+-------
+Clean up old secrets
