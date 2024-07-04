@@ -21,6 +21,12 @@ internal-jobmon-qa-788101853.us-east-1.elb.amazonaws.com
 
 internal-listview-docker-qa-493376235.us-east-1.elb.amazonaws.com
 
+internal-drs-message-queue-qa-1877518389.us-east-1.elb.amazonaws.com.
+
+NRSADMIN-QA-2118477681.us-east-1.elb.amazonaws.com
+
+NRSADMIN-API-QA-305812870.us-east-1.elb.amazonaws.com
+
 Amazon MQ
 ---------
 
