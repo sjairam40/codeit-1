@@ -37,7 +37,6 @@ Amazon MQ
 
 Remove old brokers after amalgamation.  ie JSTOR_QA_Rabbit
 
-ETD_QA_Rabbit
 JSTOR_QA_Rabbit
 MPS_QA_Rabbit
 
@@ -62,3 +61,8 @@ Remove old or unused S3 buckets.  ie lts-rancher-backup-dev
 Secrets
 -------
 Clean up old secrets - sandbox1
+
+
+CLEANUP
+=======
+ETD_QA_Rabbit - Remove June 2024
