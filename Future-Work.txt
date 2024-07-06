@@ -22,6 +22,10 @@ internal-ids-dev-redirects-1767329580.us-east-1.elb.amazonaws.com
 internal-iiif-cloud-dev-917009290.us-east-1.elb.amazonaws.com
 internal-iiif-update-dev-74720066.us-east-1.elb.amazonaws.com
 
+internal-listview-docker-dev-181514522.us-east-1.elb.amazonaws.com
+internal-mps-embed-556099215.us-east-1.elb.amazonaws.com
+internal-nrs-dev-593072726.us-east-1.elb.amazonaws.com
+
 internal-aspace-pui-qa-758411417.us-east-1.elb.amazonaws.com
 internal-aspace-staff-qa-329513297.us-east-1.elb.amazonaws.com
 
