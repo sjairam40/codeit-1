@@ -47,14 +47,14 @@ internal-listview-docker-qa-493376235.us-east-1.elb.amazonaws.com
 internal-drs-message-queue-qa-1877518389.us-east-1.elb.amazonaws.com.
 
 NRSADMIN-QA-2118477681.us-east-1.elb.amazonaws.com
-
 NRSADMIN-API-QA-305812870.us-east-1.elb.amazonaws.com
-
 mps-embeded-qa-1072023831.us-east-1.elb.amazonaws.com
-
 MPS-VIEWER-QA-1902685848.us-east-1.elb.amazonaws.com
-
 TALKWITHHOLLIS-QA-70913787.us-east-1.elb.amazonaws.com
+
+Prod
+----
+beta-curiosity-172587786.us-east-1.elb.amazonaws.com.
 
 Amazon MQ
 ---------
@@ -76,6 +76,11 @@ Clean up old certs.  ie beta.curiosity.lib.harvard.edu
 beta.curiosity.lib.harvard.edu
 deployment.prod.lib.harvard.edu
 
+Route 53 Cleanup
+----------------
+Prod
+
+beta-hgl.hz.lib.harvard.edu.
 
 S3
 ---
