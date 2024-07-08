@@ -23,9 +23,12 @@ internal-iiif-cloud-dev-917009290.us-east-1.elb.amazonaws.com
 internal-iiif-update-dev-74720066.us-east-1.elb.amazonaws.com
 
 internal-listview-docker-dev-181514522.us-east-1.elb.amazonaws.com
-internal-mps-embed-556099215.us-east-1.elb.amazonaws.com
 internal-nrs-dev-593072726.us-east-1.elb.amazonaws.com
 
+internal-policy-admin-dev-qa-765055649.us-east-1.elb.amazonaws.com
+
+qa
+--
 internal-aspace-pui-qa-758411417.us-east-1.elb.amazonaws.com
 internal-aspace-staff-qa-329513297.us-east-1.elb.amazonaws.com
 
@@ -88,3 +91,6 @@ Clean up old secrets - sandbox1
 CLEANUP
 =======
 ETD_QA_Rabbit - Remove June 2024
+
+internal-mps-embed-556099215.us-east-1.elb.amazonaws.com - 8 July 2024
+internal-MPS-VIEWER-1229790138.us-east-1.elb.amazonaws.com - 8 July 2024
