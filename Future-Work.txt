@@ -23,7 +23,6 @@ internal-iiif-cloud-dev-917009290.us-east-1.elb.amazonaws.com
 internal-iiif-update-dev-74720066.us-east-1.elb.amazonaws.com
 
 internal-listview-docker-dev-181514522.us-east-1.elb.amazonaws.com
-
 internal-policy-admin-dev-qa-765055649.us-east-1.elb.amazonaws.com
 
 qa
@@ -55,6 +54,7 @@ TALKWITHHOLLIS-QA-70913787.us-east-1.elb.amazonaws.com
 Prod
 ----
 beta-curiosity-172587786.us-east-1.elb.amazonaws.com.
+hgl-prod-1465294842.us-east-1.elb.amazonaws.com.
 
 Amazon MQ
 ---------
