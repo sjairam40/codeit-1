@@ -4,6 +4,7 @@
 WEBSITES=(
   "https://kubernetes.io/releases/"
   "https://github.com/derailed/popeye"
+  "https://istio.io/latest/docs/setup/platform-setup/"
 )
 
 # Directory to store the last known state of websites
