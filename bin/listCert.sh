@@ -7,6 +7,17 @@
 # If no ArN is provided this variable can be enabled:  List all load balancers and get their ARNs
 load_balancer_arns=$(aws elbv2 describe-load-balancers --query "LoadBalancers[*].LoadBalancerArn" --output text)
 
+clear 
+
+# Check if a region is provided as an argument
+if [ $# -eq 0 ]
+then
+    echo "Please provide an ALB arn as an argument."
+    echo "Usage: $0 <arn>"
+    echo " Run listALB.sh to get a list of Arns for this account "
+    exit 1
+fi
+
 # Check if aws cli is installed
 if ! command -v aws &> /dev/null; then
     echo "AWS CLI not found. Please install AWS CLI first."
