@@ -22,6 +22,8 @@ git clone git@github.huit.harvard.edu:LTS/DAIS-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/DRS-INFRA.git
 
+git clone git@github.huit.harvard.edu:LTS/devsecops-INFRA.git
+
 git clone git@github.huit.harvard.edu:LTS/fts-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/HDForms-INFRA.git
