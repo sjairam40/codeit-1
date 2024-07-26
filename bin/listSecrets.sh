@@ -1,4 +1,4 @@
-#!/bin/bash
+  #!/bin/bash
 # 01 - initial - jairams
 # 02 - Add AWS CLI check
 
