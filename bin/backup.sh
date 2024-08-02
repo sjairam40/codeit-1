@@ -8,7 +8,7 @@ cd /Volumes/Data2024/
 
 month=`date +%b`
 echo " --> Creating Month docco"
-timeSec=5
+timeSec=2
 
 DOCCO='Documents-$month-2024'
 
