@@ -1,0 +1,23 @@
+
+#!/bin/bash
+
+newDate=`date '+%Y-%m-%d' `
+
+echo $newDate
+
+mkdir gateway-`date '+%Y-%m-%d' `
+
+cd gateway-$newDate
+
+ # List of Kubernetes resources 
+
+kubens istio-system
+
+kubectl get secrets apiprivate-cert -o yaml >> apiprivate-cert.yaml
+
+kubectl get secrets private-cert -o yaml >> private-cert.yaml
+
+kubectl get secrets public-cert -o yaml >> public-cert.yaml
+
+kubectl get secrets server-cert -o yaml >> server-cert.yaml
+
