@@ -1,0 +1,6 @@
+
+ALB                             TG 
+mps-embed-qa                || mps-embed-qa-23018
+mps-viewer-qa               || 
+MPS-VIEWER-QA               ||  mps-viewer-qa-23017
+booklabeler-qa              ||  Booklabeler-QA
