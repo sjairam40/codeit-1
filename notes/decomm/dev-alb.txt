@@ -1,0 +1,18 @@
+access-dev                      ||   access-dev-http-23016
+aspace-api-dev                  ||.  aspace-api-dev 
+aspace-pui-dev                  ||   aspace-pui-dev
+aspace-staff-dev                ||   aspace-staff-dev
+
+ids-dev                         ||   ids-dev-http
+ids-dev-redirects               ||.  ids-dev-redirects ids-dev-redirects-http-23091
+
+fts-dev                         ||   fts-dev. / fts-dev 10087
+fts-dev-library-                ||.  fts-http-10446 fts-dev-10087 fts-dev-10088
+
+listview-docker-dev             ||   listview-docker-dev-https
+mps-dev                         ||   mps-dev-2300
+mps-admin-dev                   ||   mps-admin-dev-http-23004
+pds-dev                         ||   pds-http-dev  pds-dev=http2
+
+secureexit                      ||   secureexit 
+SDS-Cookie-Server				||   SDS Cookie-Server
