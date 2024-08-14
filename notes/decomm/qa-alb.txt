@@ -1,5 +1,7 @@
 
 ALB                             TG 
+jobmon-qa                   || jobmon-qa-http
+JOBMON-QA                   || JOBMON-QA-HTTPS
 mps-embed-qa                || mps-embed-qa-23018
 mps-viewer-qa               || 
 MPS-VIEWER-QA               ||  mps-viewer-qa-23017
