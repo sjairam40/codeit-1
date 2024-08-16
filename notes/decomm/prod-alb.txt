@@ -1,3 +1,5 @@
 ALB                             TG
-Booklabeler-PROD             ||  Booklabeler-PROD
+Booklabeler-PROD             ||  Booklabeler-prod
+EADCHECKER-PROD              ||  EADCHECKER-PROD-DOCKER
+JOBMON-PROD                  ||  
 MPS-VIEWER-PROD              ||  MPS-VIEWER-PROD
