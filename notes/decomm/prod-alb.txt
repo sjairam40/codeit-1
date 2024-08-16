@@ -1,5 +1,7 @@
 ALB                             TG
 Booklabeler-PROD             ||  Booklabeler-prod
 EADCHECKER-PROD              ||  EADCHECKER-PROD-DOCKER
-JOBMON-PROD                  ||  
+JOBMON-PROD                  ||  JOBMON-PROD-HTTPS
+MPS-EMBED-PROD               ||  
 MPS-VIEWER-PROD              ||  MPS-VIEWER-PROD
+Policy-Admin-PROD            ||  policy-admin-prod-9013
