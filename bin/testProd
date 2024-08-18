@@ -1,6 +1,6 @@
 #!/bin/bash
 
-websites=("https://cluster-console.prod.lib.harvard.edu" "https://deployment.prod.lib.harvard.edu" "https://logs.prod.lib.harvard.edu/" "https://arstaff.lib.harvard.edu/" "https://booklabeler.lib.harvard.edu/" "https://curiosity.lib.harvard.edu" "https://eadchecker.lib.harvard.edu/" "https://embed.lib.harvard.edu" "https://fts.lib.harvard.edu/fts/" "https://hgl.harvard.edu/" "https://hollisarchives.lib.harvard.edu" "https://listview.lib.harvard.edu" "https://tools.lib.harvard.edu/hdforms/retrieval" "https://viewer.lib.harvard.edu")
+websites=("https://cluster-console.prod.lib.harvard.edu" "https://deployment.prod.lib.harvard.edu" "https://logs.prod.lib.harvard.edu/" "https://arstaff.lib.harvard.edu/" "https://booklabeler.lib.harvard.edu/" "https://curiosity.lib.harvard.edu" "https://eadchecker.lib.harvard.edu/" "https://embed.lib.harvard.edu" "https://fts.lib.harvard.edu/fts/" "https://hollisarchives.lib.harvard.edu" "https://hgl.harvard.edu/" "https://hollisarchives.lib.harvard.edu" "https://jobmon-prod.lib.harvard.edu" "https://listview.lib.harvard.edu" "https://tools.lib.harvard.edu/hdforms/retrieval" "https://viewer.lib.harvard.edu")
 
 for site in "${websites[@]}"
 
