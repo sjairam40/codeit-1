@@ -1,5 +1,7 @@
 
 ALB                             TG 
+FTS-QA                      || FTS-QA
+                            || FTS-QA-10087
 jobmon-qa                   || jobmon-qa-http
 JOBMON-QA                   || JOBMON-QA-HTTPS
 mps-embed-qa                || mps-embed-qa-23018
