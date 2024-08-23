@@ -3,6 +3,7 @@ aspace-api-dev                  ||.  aspace-api-dev
 aspace-pui-dev                  ||   aspace-pui-dev
 aspace-staff-dev                ||   aspace-staff-dev
 
+drsmdssrv                       ||   drsmdssrv-dev-http
 ids-dev                         ||   ids-dev-http
 ids-dev-redirects               ||.  ids-dev-redirects ids-dev-redirects-http-23091
 
