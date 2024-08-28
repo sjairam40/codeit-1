@@ -11,7 +11,7 @@ cd secrets-$newDate
 
  # List of Kubernetes resources 
 
-resources=("acorn" "arclight" "aspace" "booklabeler" "collex" "curiosity" "dais" "drs" "etd" "fts" "hdforms" "hgl" "ids" "imgconv" "jstor" "jobmonitor" "librarycloud" "listview" "lts-pipelines" "mds" "mps" "mps-viewer" "mpsadm" "nrs" "nrsadm" "policy" "presto" "sds" "secureexit" "talkwithhollis")  
+resources=("acorn" "arclight" "aspace" "bibddata" "booklabeler" "collex" "curiosity" "dais" "drs" "etd" "fts" "hdforms" "hgl" "ids" "imgconv" "jstor" "jobmonitor" "librarycloud" "listview" "lts-pipelines" "mds" "mps" "mps-viewer" "mpsadm" "nrs" "nrsadm" "policy" "presto" "sds" "secureexit" "talkwithhollis")  
 # Iterate over each resource 
 
 for resource in "${resources[@]}"; 
