@@ -2,6 +2,8 @@
 ALB                             TG 
 FTS-QA                      || FTS-QA
                             || FTS-QA-10087
+IDS-QA                      || IDS-QA-HTTP
+                            || IDS-QA-HTTPS
 jobmon-qa                   || jobmon-qa-http
 JOBMON-QA                   || JOBMON-QA-HTTPS
 Listview-QA                 || Listview-docker-qa-http
