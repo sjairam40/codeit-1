@@ -8,4 +8,6 @@ Listview-QA                 || Listview-docker-qa-http
 mps-embed-qa                || mps-embed-qa-23018
 mps-viewer-qa               || 
 MPS-VIEWER-QA               ||  mps-viewer-qa-23017
+NRS-QA                      ||  NRS-QA-DOCKER
+nrs-qa                      ||  nrs-QA-docker 
 booklabeler-qa              ||  Booklabeler-QA
