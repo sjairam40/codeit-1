@@ -70,6 +70,10 @@ echo " --> Copying 0 txts"
 cp -R 0*.txt /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copy DEMO"
+cp -R DEMOS /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copy D&G"
 cp -R Domestic* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
@@ -77,6 +81,10 @@ sleep $timeSec
 # echo " --> Copy GitHub"
 # cp -R GitHub* /Volumes/Data2024/Documents-$month-2024/
 # sleep $timeSec
+
+echo " --> Copy E*"
+cp -R E* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
 
 echo " --> Copy Harvard"
 cp -R HARVARD* /Volumes/Data2024/Documents-$month-2024/
@@ -90,6 +98,10 @@ echo " --> Copy J*"
 cp -R J* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copy K*"
+cp -R K* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copy Orca"
 cp -R ORCA* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
@@ -100,6 +112,10 @@ sleep $timeSec
 
 echo " --> Copy RKE"
 cp -R RKE* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copy T*"
+cp -R T* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copy Zoom"
