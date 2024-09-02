@@ -17,6 +17,8 @@ MPS-VIEWER-QA               ||  mps-viewer-qa-23017
 NRS-QA                      ||  NRS-QA-DOCKER
 nrs-qa                      ||  nrs-QA-docker
 
+pds-qa                      ||  pds-qa                      02/09/24
+                            ||  pds-qa-ssl
 sds-qa-docker               ||  SDS-QA                      31/08/24
 SDS-QA                      ||  
 SDS-CS-QA                   ||  
