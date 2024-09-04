@@ -5,6 +5,9 @@
 
 * Download Aws-login : https://github.huit.harvard.edu/HUIT/aws-login-saml-cli
 
+* Install DaisyDisk from ZIP
+- Key and Email seperate
+
 * Install 1Password
 https://my.1password.com/
 
