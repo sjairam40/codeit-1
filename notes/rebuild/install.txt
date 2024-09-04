@@ -14,3 +14,7 @@ https://my.1password.com/
 Key: A3-7DJJRM-R8BPJ8-9J87B-SLBHZ-VWM7V-Y2ML2
 
 * brew install 1password-cli
+
+* Install AText
+- User: sanjay.jairam.mx@gmagmail.com
+- Serial: (On Gmail)
