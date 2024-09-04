@@ -24,6 +24,7 @@ brew 'jq'
 # KUBECTL from kubernetes.io
 brew 'k9s'
 brew 'kubectl'
+brew 'kubectx'
 brew 'helm'
 brew 'minikube'
 brew 'nmap'
