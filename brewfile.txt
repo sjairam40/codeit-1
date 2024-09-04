@@ -4,6 +4,7 @@ cask_args appdir: '/Applications'
 # install packages
 tap 'homebrew/cask' || true
 # ACT plugin for GITHUB actions
+brew '1password-cli'
 brew 'act'
 brew 'argocd'
 brew 'awscli'
