@@ -62,8 +62,20 @@ echo " --> Copying 6-PROD"
 cp -R 6-PROD* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copying 7-LZPROD"
+cp -R 7-LZPROD* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copying A*"
 cp -R A* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copying C*"
+cp -R C* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copying D*"
+cp -R D* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copying 0 txts"
