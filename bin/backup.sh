@@ -50,6 +50,10 @@ echo " --> Copying 00-personal"
 cp -R 00-personal-00 /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copying 1-SANDBOX"
+cp -R 1-SAND* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copying 4-DEV"
 cp -R 4-DEV* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
@@ -148,6 +152,10 @@ sleep $timeSec
 
 echo " ###>> Going to Pictures"
 cd ~/Pictures
+sleep $timeSec
+
+echo " --> Copy 00-oteemo"
+cp -R 00-oteemo* /Volumes/Data2024/Documents-$month-2024/Pictures
 sleep $timeSec
 
 echo " --> Copy 00-personal"
