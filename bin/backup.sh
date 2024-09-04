@@ -98,6 +98,10 @@ echo " --> Copy E*"
 cp -R E* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copy G*"
+cp -R G* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copy Harvard"
 cp -R HARVARD* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
