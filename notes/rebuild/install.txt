@@ -3,7 +3,11 @@
 
 * Install BREW with command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+* Download Aws-login : https://github.huit.harvard.edu/HUIT/aws-login-saml-cli
+
 * Install 1Password
 https://my.1password.com/
 
 Key: A3-7DJJRM-R8BPJ8-9J87B-SLBHZ-VWM7V-Y2ML2
+
+* brew install 1password-cli
