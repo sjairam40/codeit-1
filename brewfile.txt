@@ -40,6 +40,7 @@ brew 'wget'
 ## CASKS 
 ##########
 cask 'authy'
+cask 'copyclip'
 cask 'drawio'
 cask 'firefox'
 # GITHUB desktop for GitHub repos etc
