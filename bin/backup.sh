@@ -15,7 +15,11 @@ DOCCO='Documents-$month-2024'
 if [ ! -d ${DOCCO} ]; 
 then
     mkdir Documents-$month-2024
+    mkdir Documents-$month-2024/01-kube
+    mkdir Documents-$month-2024/02-ssh
+    mkdir Documents-$month-2024/03-shells
     mkdir Documents-$month-2024/Pictures
+    mkdir Documents-$month-2024/Movies
 else 
     echo " --> Folder exists"
 fi
@@ -25,17 +29,17 @@ cd ~/Documents
 sleep $timeSec
 
 echo " --> cp shells "
-cp -R ~/.aliases  /Volumes/Data2024/Documents-$month-2024/
-cp -R ~/.bashrc  /Volumes/Data2024/Documents-$month-2024/
-cp -R ~/.zshrc  /Volumes/Data2024/Documents-$month-2024/
+cp -R ~/.aliases  /Volumes/Data2024/Documents-$month-2024/03-shells
+cp -R ~/.bashrc  /Volumes/Data2024/Documents-$month-2024/03-shells
+cp -R ~/.zshrc  /Volumes/Data2024/Documents-$month-2024/03-shells
 sleep $timeSec
 
 echo " --> cp .kube "
-cp -R ~/.kube  /Volumes/Data2024/Documents-$month-2024/
+cp -R ~/.kube  /Volumes/Data2024/Documents-$month-2024/01-kube
 sleep $timeSec
 
 echo " --> cp .ssh "
-cp -R ~/.ssh  /Volumes/Data2024/Documents-$month-2024/
+cp -R ~/.ssh  /Volumes/Data2024/Documents-$month-2024/02-ssh
 sleep $timeSec
 
 echo " --> cp passwords "
@@ -168,6 +172,30 @@ sleep $timeSec
 
 echo " --> Copy HARVARD"
 cp -R HARVARD* /Volumes/Data2024/Documents-$month-2024/Pictures
+sleep $timeSec
+
+echo " ###>> Going to Movies"
+cd ~/Movies
+
+echo " --> Going to 07"
+cp -R 0723* /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
+
+echo " --> Going to 09"
+cp -R 0823* /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
+
+cp -R 0923* /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
+
+echo " --> Going to HUMOUR"
+cp -R HUMOUR* /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
+
+echo " --> Going to LEARNING"
+cp -R LEARNING /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
+
 sleep $timeSec
 
 end_time=$(date +%s)
