@@ -54,8 +54,12 @@ echo " --> Copying 00-personal"
 cp -R 00-personal-00 /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copying 1-SANDBOX"
+echo " --> Copying 1-SANDBOX*"
 cp -R 1-SAND* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copying 2-SANDBOX*"
+cp -R 2-SAND* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copying 4-DEV"
@@ -148,6 +152,10 @@ sleep $timeSec
 
 echo " --> Copy zz-home"
 cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copy zz-notes"
+cp -R zz-notes* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copy Installed"
