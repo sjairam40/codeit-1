@@ -18,6 +18,7 @@ then
     mkdir Documents-$month-2024/01-kube
     mkdir Documents-$month-2024/02-ssh
     mkdir Documents-$month-2024/03-shells
+    mkdir Documents-$month-2024/04-aws
     mkdir Documents-$month-2024/Pictures
     mkdir Documents-$month-2024/Movies
 else 
@@ -36,10 +37,16 @@ sleep $timeSec
 
 echo " --> cp .kube "
 cp -R ~/.kube  /Volumes/Data2024/Documents-$month-2024/01-kube
+cp ~/.kube/*.txt /Volumes/Data2024/Documents-$month-2024/01-kube
+cp ~/.kube/*.crt /Volumes/Data2024/Documents-$month-2024/01-kube
 sleep $timeSec
 
 echo " --> cp .ssh "
 cp -R ~/.ssh  /Volumes/Data2024/Documents-$month-2024/02-ssh
+sleep $timeSec
+
+echo " --> cp .aws "
+cp -R ~/.aws  /Volumes/Data2024/Documents-$month-2024/04-aws
 sleep $timeSec
 
 echo " --> cp passwords "
