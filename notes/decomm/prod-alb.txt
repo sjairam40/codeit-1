@@ -8,4 +8,7 @@ NRS-PROD                     ||  NRS-PROD-DOCKER            - 30/08/24
 NRSADMIN-PROD                ||  NRSADMIN-PROD-HTTP         - 30/08/28
 MPS-EMBED-PROD               ||  
 MPS-VIEWER-PROD              ||  MPS-VIEWER-PROD
+pds-alb-prod                 ||  pds-alb-prod-http           10/09/2024
+                             ||  pds-alb-prod-https
+                             ||  pds-prod-alb-9005
 Policy-Admin-PROD            ||  policy-admin-prod-9013

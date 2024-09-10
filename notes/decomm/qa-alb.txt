@@ -19,9 +19,6 @@ MPS-Ingest-QA               ||  MPS-Ingest-QA               07/09/2024
 MPS-VIEWER-QA               ||  mps-viewer-qa-23017
 NRS-QA                      ||  NRS-QA-DOCKER
 nrs-qa                      ||  nrs-QA-docker
-pds-alb-prod                ||  pds-alb-prod-http           10/09/2024
-                            ||  pds-alb-prod-https
-                            ||  pds-prod-alb-9005
 pds-qa                      ||  pds-qa                      02/09/24
                             ||  pds-qa-ssl
 sds-qa-docker               ||  SDS-QA                      31/08/24
