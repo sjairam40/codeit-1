@@ -8,6 +8,8 @@ FTS-QA                      || FTS-QA
                             || FTS-QA-10087
 IDS-QA                      || IDS-QA-HTTP
                             || IDS-QA-HTTPS
+IIIF-QA                     || IIIF-QA-HTTP
+                            || IIIF-QA-HTTPS
 jobmon-qa                   || jobmon-qa-http
 JOBMON-QA                   || JOBMON-QA-HTTPS
 Listview-QA                 || Listview-docker-qa-http
@@ -17,7 +19,6 @@ MPS-Ingest-QA               ||  MPS-Ingest-QA               07/09/2024
 MPS-VIEWER-QA               ||  mps-viewer-qa-23017
 NRS-QA                      ||  NRS-QA-DOCKER
 nrs-qa                      ||  nrs-QA-docker
-
 pds-qa                      ||  pds-qa                      02/09/24
                             ||  pds-qa-ssl
 sds-qa-docker               ||  SDS-QA                      31/08/24
