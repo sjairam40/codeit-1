@@ -1,6 +1,8 @@
 ALB                             TG
 Booklabeler-PROD             ||  Booklabeler-prod
 EADCHECKER-PROD              ||  EADCHECKER-PROD-DOCKER
+FTS-PROD                     ||  FTS-PROD                   - 10/09/24
+                             ||  FTS-PROD-10087
 JOBMON-PROD                  ||  JOBMON-PROD-HTTPS
 
 LISTVIEW-DOCKER-PROD         ||  listview-docker-prod-http  - 02/09/24
