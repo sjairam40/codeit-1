@@ -78,7 +78,7 @@ cp -R 4-DEV* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copying 5-SANDBOX"
-cp -R 6-SNAD* /Volumes/Data2024/Documents-$month-2024/
+cp -R 5-SAND* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copying 6-SANDBOX"
@@ -196,10 +196,11 @@ echo " --> Going to 07"
 cp -R 0723* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
-echo " --> Going to 09"
+echo " --> Going to 08"
 cp -R 0823* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
+echo " --> Going to 09"
 cp -R 0923* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
@@ -208,9 +209,7 @@ cp -R HUMOUR* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
 echo " --> Going to LEARNING"
-cp -R LEARNING /Volumes/Data2024/Documents-$month-2024/Movies
-sleep $timeSec
-
+cp -R LEARNING* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
 end_time=$(date +%s)
