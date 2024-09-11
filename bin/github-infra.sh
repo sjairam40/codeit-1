@@ -14,6 +14,8 @@ git clone git@github.huit.harvard.edu:LTS/argoCD-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/aspace-INFRA.git
 
+git clone git@github.huit.harvard.edu:LTS/bibdatalookup-INFRA.git
+
 git clone git@github.huit.harvard.edu:LTS/booklabeler-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/curiosity-INFRA.git
