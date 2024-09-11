@@ -61,28 +61,28 @@ echo " --> Copying 00-personal"
 cp -R 00-personal-00 /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copying 1-SANDBOX*"
-cp -R 1-SAND* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copying 1-PROD*"
+cp -R 1-PROD* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copying 2-SANDBOX*"
-cp -R 2-SAND* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copying 2-LZPROD*"
+cp -R 2-LZPROD* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copying 3-QA"
+cp -R 3-QA* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copying 4-DEV"
 cp -R 4-DEV* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copying 5-QA"
-cp -R 5-QA* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copying 5-SANDBOX"
+cp -R 6-SNAD* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copying 6-PROD"
-cp -R 6-PROD* /Volumes/Data2024/Documents-$month-2024/
-sleep $timeSec
-
-echo " --> Copying 7-LZPROD"
-cp -R 7-LZPROD* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copying 6-SANDBOX"
+cp -R 6-SANDBOX* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copying A*"
