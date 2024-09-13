@@ -19,6 +19,7 @@ then
     mkdir Documents-$month-2024/02-ssh
     mkdir Documents-$month-2024/03-shells
     mkdir Documents-$month-2024/04-aws
+    mkdir Documents-$month-2024/Desktop
     mkdir Documents-$month-2024/Pictures
     mkdir Documents-$month-2024/Movies
 else 
@@ -210,6 +211,13 @@ sleep $timeSec
 
 echo " --> Going to LEARNING"
 cp -R LEARNING* /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
+
+echo " ###>> Going to Desktop"
+cd ~/Desktop
+
+echo " --> Going to Desktop"
+cp -R * /Volumes/Data2024/Documents-$month-2024/Desktop
 sleep $timeSec
 
 end_time=$(date +%s)
