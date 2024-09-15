@@ -86,7 +86,7 @@ fi
 
 ## dateTime=`date +%d-%m-%Y-%H-%M-%S`
 dateTime=`date +%Y%m%d`
-##dir=/Users/jairams/dgadmin/logs/nmapCheck
+##dir=/Users/sjairam/dgadmin/logs/nmapCheck
 
 # Return code used by nagios. Initialize to 0.
 RETCODE=0
@@ -705,14 +705,14 @@ if [ ${macOS} = "TRUE" ]; then
     if [ ${DEBUG} = "TRUE" ]; then
         echo " --> if macOS : true "
     fi
-        REPORT_DIR=/Users/jairams/was/dgadmin/logs/sslCheck
+        REPORT_DIR=/Users/sjairam/was/dgadmin/logs/sslCheck
         tempFile=$REPORT_DIR/$file-$dateTime-A.csv
         LOGDIR=$REPORT_DIR/$file-$dateTime.csv
     else
         if [ ${DEBUG} = "TRUE" ]; then
             echo " --> if macOS : false "
         fi
-        REPORT_DIR=/Users/jairams/was/dgadmin/logs/sslCheck
+        REPORT_DIR=/Users/sjairam/was/dgadmin/logs/sslCheck
         tempFile=$dREPORT_DIRir/$file-$dateTime-A.csv
         LOGDIR=$REPORT_DIR/$file-$dateTime.csv
 
