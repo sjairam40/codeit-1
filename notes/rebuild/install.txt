@@ -55,3 +55,8 @@ sudo mv terraformer-${PROVIDER}-darwin-amd64 /usr/local/bin/terraformer
 kubectl krew install clog
 kubectl krew install ktop
 kubectl krew install mtail
+
+* m1 workaround for M chips
+
+m1-terraform-provider-helper activate
+m1-terraform-provider-helper install hashicorp/template -v v2.2.0
