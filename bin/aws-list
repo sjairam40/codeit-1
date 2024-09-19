@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# List all EC2 instances with their instance IDs and names (if they have a 'Name' tag)
+aws ec2 describe-instances \
+    --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==`Name`].Value | [0]}' \
+    --output table
+
