@@ -154,6 +154,10 @@ echo " --> Copy T*"
 cp -R T* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copy W*"
+cp -R W* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copy Zoom"
 cp -R Zoom* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
