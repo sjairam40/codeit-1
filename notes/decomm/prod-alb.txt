@@ -1,4 +1,5 @@
-ALB                             TG
+ALB                             TG                              SG
+Acorn                        ||  acorn-prod-http            || Acorn-prod       - 26/09/24
 Booklabeler-PROD             ||  Booklabeler-prod
 EADCHECKER-PROD              ||  EADCHECKER-PROD-DOCKER
 FTS-PROD                     ||  FTS-PROD                   - 10/09/24
