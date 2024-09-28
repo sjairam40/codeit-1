@@ -3,6 +3,8 @@ aspace-api-dev                  ||.  aspace-api-dev
 aspace-pui-dev                  ||   aspace-pui-dev
 aspace-staff-dev                ||   aspace-staff-dev
 
+drs2-dev                        ||   drs-dev-https                          28/09/24
+eas                             ||   eas-dev-https-10043                    28/09/24
 drsmdssrv                       ||   drsmdssrv-dev-http
 drsmqsrv                        ||   drsmqsrv-dev
 
