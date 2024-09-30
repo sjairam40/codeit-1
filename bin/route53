@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Replace with your domain name (hosted zone name)
+DOMAIN_NAME="hz.lib.harvard.edu"
+
+# Fetch the hosted zone ID for the given domain
+HOSTED_ZONE_ID=$(aws route53 list-hosted-zones-by-name \
+    --dns-name "$DOMAIN_NAME" \
+    --query "HostedZones[0].Id" \
+    --output text | cut -d'/' -f3)
+
+# Check if the hosted zone ID was found
+if [ -z "$HOSTED_ZONE_ID" ]; then
+    echo "Hosted zone for $DOMAIN_NAME not found."
+    exit 1
+fi
+
+# List all DNS records for the hosted zone
+aws route53 list-resource-record-sets \
+    --hosted-zone-id "$HOSTED_ZONE_ID" \
+    --query 'ResourceRecordSets[*].{Name:Name, Type:Type, AliasTarget:AliasTarget.DNSName, Records:ResourceRecords[*].Value}' \
+    --output table | awk '
+/Type/ { type = $2 }
+/AliasTarget/ && $1 == "AliasTarget:" { alias = $2 }
+/Records/ && $1 == "Records:" { records = $2 }
+NR > 2 && type && !alias { printf "%-50s %-10s %-50s\n", name, type, records }
+/Name/ { name = $2; type = ""; alias = ""; records = "" }
+NR > 2 && alias { printf "%-50s %-10s Alias -> %s\n", name, type, alias }
+'
