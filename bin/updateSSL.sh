@@ -45,6 +45,13 @@ applySecret ()
     echo " --> after kubectl ! "
 }
 
+applyRollingRestart ()
+{
+    # Update Rancher with SSL Certificate
+    helm upgrade -i rancher rancher-latest/rancher --namespace cattle-system --version ${rancher_version} --set hostname=${hostname} --set bootstrapPassword="${rancher_password}" --set ingress.tls.source=secret --set replicas=1
+
+}
+
 
 if [ "${1}" != "sand" ] && [ "${1}" != "dev" ];
 then 
@@ -62,6 +69,4 @@ else
 fi
 
 
-# Update Rancher with SSL Certificate
-#helm upgrade -i rancher rancher-latest/rancher --namespace cattle-system --version ${rancher_version} --set hostname=${hostname} --set bootstrapPassword="${rancher_password}" --set ingress.tls.source=secret --set replicas=1
 
