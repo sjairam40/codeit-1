@@ -1,5 +1,7 @@
 #!/bin/bash
+# TODO :  Write README
 version=0.1
+
 
 AWS=$(command -v aws)
 
@@ -48,15 +50,16 @@ applySecret ()
 applyRollingRestart ()
 {
     # Update Rancher with SSL Certificate
-    helm upgrade -i rancher rancher-latest/rancher --namespace cattle-system --version ${rancher_version} --set hostname=${hostname} --set bootstrapPassword="${rancher_password}" --set ingress.tls.source=secret --set replicas=1
+    #helm upgrade -i rancher rancher-latest/rancher --namespace cattle-system --version ${rancher_version} --set hostname=${hostname} --set bootstrapPassword="${rancher_password}" --set ingress.tls.source=secret --set replicas=1
+    kubectl rollout restart deployment rancher
 
 }
 
 
-if [ "${1}" != "sand" ] && [ "${1}" != "dev" ];
+if [ "${1}" != "sand" ] || [ "${1}" != "dev" ] || [ "${1}" != "qa" ] || [ "${1}" != "prod" ];
 then 
     echo " "
-    echo "  Valid entries are sand,qa or prod "
+    echo "  Valid entries are sand,dev, qa, lzp or prod "
 else
     echo " --> Extracting ssl certs"
     env_prefix=$1
@@ -66,6 +69,7 @@ else
     aws secretsmanager get-secret-value --region us-east-1 --secret-id ${env_prefix}-ssl-key --query SecretString --output text|tr -d '"' > /tmp/tls.key
     sleep 5
     applySecret
+    applyRollingRestart
 fi
 
 
