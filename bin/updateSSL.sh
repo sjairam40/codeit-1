@@ -7,10 +7,9 @@ CAT=$(command -v cat)
 
 KUBECTL=$(command -v kubectl)
 
-# Create SSL Certificate Kubernetes Secrets
-aws secretsmanager get-secret-value --region us-east-1 --secret-id ${env_prefix}-ssl-cert --query SecretString --output text|tr -d '"' > /tmp/tls.crt
-aws secretsmanager get-secret-value --region us-east-1 --secret-id ${env_prefix}-ssl-key --query SecretString --output text|tr -d '"' > /tmp/tls.key
+clear
 
+sleep 2
 
 #### AWS
 #### Check to make sure the aws cli utility is available
@@ -36,16 +35,33 @@ if [ ! -f "${KUBECTL}" ]; then
     exit 1
 fi
 
-#### UNIQ
-#### Check to make sure the uname utility is available
-if [ ! -f "${UNIQ}" ]; then
-    echo "ERROR: Unable to locate the uniq binary."
-    echo "FIX: Please modify the \${UNIQ} variables in the program header."
-    exit 1
+applySecret ()
+{
+    echo " --> Entering KUBECTL"
+    kubectl -n cattle-system create secret tls tls-rancher-ingress \
+        --cert=tls.crt \
+        --key=tls.key \
+        --dry-run --save-config -o yaml | kubectl apply -f -
+    echo " --> after kubectl ! "
+}
+
+
+if [ "${1}" != "sand" ] && [ "${1}" != "dev" ];
+then 
+    echo " "
+    echo "  Valid entries are sand,qa or prod "
+else
+    echo " --> Extracting ssl certs"
+    env_prefix=$1
+    echo " --> Env prefix is $env_prefix"
+    # Create SSL Certificate Kubernetes Secrets
+    aws secretsmanager get-secret-value --region us-east-1 --secret-id ${env_prefix}-ssl-cert --query SecretString --output text|tr -d '"' > /tmp/tls.crt
+    aws secretsmanager get-secret-value --region us-east-1 --secret-id ${env_prefix}-ssl-key --query SecretString --output text|tr -d '"' > /tmp/tls.key
+    sleep 5
+    applySecret
 fi
 
-kubectl -n cattle-system create secret tls tls-rancher-ingress --cert=/tmp/tls.crt --key=/tmp/tls.key
 
 # Update Rancher with SSL Certificate
-helm upgrade -i rancher rancher-latest/rancher --namespace cattle-system --version ${rancher_version} --set hostname=${hostname} --set bootstrapPassword="${rancher_password}" --set ingress.tls.source=secret --set replicas=1
+#helm upgrade -i rancher rancher-latest/rancher --namespace cattle-system --version ${rancher_version} --set hostname=${hostname} --set bootstrapPassword="${rancher_password}" --set ingress.tls.source=secret --set replicas=1
 
