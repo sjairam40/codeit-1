@@ -17,6 +17,8 @@ fts-dev-library-                ||.  fts-http-10446 fts-dev-10087 fts-dev-10088
 listview-docker-dev             ||   listview-docker-dev-https
 mps-dev                         ||   mps-dev-2300
 mps-admin-dev                   ||   mps-admin-dev-http-23004
+MPSADMIN-DEV                    ||   MPS-ADMIN-DEV-HTTP-23004               06/10/24
+nrsadmin-api                    ||   nrsadmin-api-https                     06/10/24
 pds-dev                         ||   pds-http-dev  pds-dev=http2
 
 secureexit                      ||   secureexit 
