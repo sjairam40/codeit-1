@@ -40,5 +40,5 @@ function check_nodes() {
 # Run the check every 60 seconds
 while true; do
   check_nodes
-  sleep 60
+  sleep 600
 done
