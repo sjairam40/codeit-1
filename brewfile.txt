@@ -11,6 +11,7 @@ brew 'awscli'
 brew 'aws-iam-authenticator'
 brew 'aws-sam-cli'
 brew 'bash-completion'
+brew 'caffeine'
 #brew 'docker'
 # EKSCTL for AWS for EKS (kubernetes)
 brew 'eksctl'
