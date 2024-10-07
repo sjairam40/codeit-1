@@ -206,7 +206,7 @@ cp -R 0823* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
 echo " --> Going to 09"
-cp -R 0923* /Volumes/Data2024/Documents-$month-2024/Movies
+cp -R 09* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
 echo " --> Going to HUMOUR"
