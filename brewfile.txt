@@ -28,6 +28,8 @@ brew 'k9s'
 brew 'kubectl'
 brew 'kubectx'
 brew 'helm'
+# libpg for PSQL 
+brew 'libpg'
 brew 'minikube'
 brew 'ncdu'
 brew 'nmap'
