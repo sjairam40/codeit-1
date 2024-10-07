@@ -1,10 +1,20 @@
 #!/bin/bash
 
+# clear
+
+# echo " List all the EC2 instances with their InstanceIDS "
+
+# aws ec2 describe-instances \
+#     --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==`Name`].Value | [0]}' \
+#     --output table
+
+#!/bin/bash
+
 clear
 
-echo " List all the EC2 instances with their InstanceIDS "
+echo " List all the running EC2 instances with their InstanceIDs, Names, and States "
 
 aws ec2 describe-instances \
-    --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==`Name`].Value | [0]}' \
+    --filters "Name=instance-state-name,Values=running" \
+    --query 'Reservations[*].Instances[*].{InstanceID:InstanceId, Name:Tags[?Key==`Name`].Value | [0], State:State.Name}' \
     --output table
-
