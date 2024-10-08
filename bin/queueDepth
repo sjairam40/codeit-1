@@ -2,29 +2,13 @@
 
 # This script lists all SQS queues and prints the approximate message count for each
 
-# Ensure that AWS CLI is installed and configured
+AWS=$(command -v aws)
 
-AWK=$(command -v awk)
-DATE=$(command -v date)
-ECHO=$(command -v echo)
-FIND=$(command -v find)
-GREP=$(command -v grep)
-MKDIR=$(command -v mkdir)
-MKTEMP=$(command -v mktemp)
-OPENSSL=$(command -v openssl)
-PRINTF=$(command -v printf)
-RM=$(command -v rm)
-SED=$(command -v sed)
-TEE=$(command -v tee)
-TOUCH=$(command -v touch)
-UNAME=$(command -v uname)
-
-# Check if aws cli is installed
-if ! command -v aws &> /dev/null; then
-    echo "AWS CLI not found. Please install AWS CLI first."
+if [ ! -f "${AWS}" ]; then
+    echo "ERROR: The aws binary does not exist."
+    echo "FIX: Please modify the \${AWS} variable in the program header."
     exit 1
 fi
-
 
 # Retrieve all SQS queue URLs
 queue_urls=$(aws sqs list-queues --query 'QueueUrls[*]' --output text)
