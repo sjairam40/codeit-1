@@ -1,11 +1,22 @@
 
-bibdata-test.hz.lib.harvard.edu == dualstack.bibdata-test-1531893910.us-east-1.elb.amazonaws.com.   07/10/24
-pds-alb-qa.hz.lib.harvard.edu == dualstack.pds-qa-1612433862.us-east-1.elb.amazonaws.com.           07/10/24
+Removed DNSes
+=============
+bibdata-test.hz.lib.harvard.edu == dualstack.bibdata-test-1531893910.us-east-1.elb.amazonaws.com.               07/10/24
 
+eda-iip-prod.hz.lib.harvard.edu == dualstack.eda-iip-prod-2130927775.us-east-1.elb.amazonaws.com.               08/10/24
+
+inscriptio-prod.hz.lib.harvard.edu == dualstack.inscriptio-prod-437608039.us-east-1.elb.amazonaws.com.          08/20/24
+inscriptio-qa.hz.lib.harvard.edu == dualstack.internal-inscriptio-qa-1518856130.us-east-1.elb.amazonaws.com.    08/10/24
+
+
+pds-alb-qa.hz.lib.harvard.edu == dualstack.pds-qa-1612433862.us-east-1.elb.amazonaws.com.                       07/10/24
+
+Modified
+--------dualstack.alumni-ezproxy-prod-1953327360.us-east-1.elb.amazonaws.com.
 
 Modified eda-qa.hz.lib.harvard.edu  ==  dualstack.eda-qa-411466772.us-east-1.elb.amazonaws.com.     08/10/24
 
 
 
 6/10/24         160
-10/10/24        159
+10/10/24        156
