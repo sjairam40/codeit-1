@@ -6,6 +6,8 @@ booklabeler-qa              || Booklabeler-QA
 CNA-QA                      || COLONIAL AMERICA QA          09/10/24
 Dockerised-QA               || No Listener 
 EDA-QA                      || EDA-QA                       09/10/24
+DCP-QA                      || dcp-qa                       09/10/24
+DOCKERISED TOOLS QA         ||                              09/10/24
 
 FTS-QA                      || FTS-QA
                             || FTS-QA-10087
