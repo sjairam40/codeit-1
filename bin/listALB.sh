@@ -2,9 +2,11 @@
 # 01 - initial - jairams
 # 02 - Add AWS CLI check
 
-# Check if aws cli is installed
-if ! command -v aws &> /dev/null; then
-    echo "AWS CLI not found. Please install AWS CLI first."
+AWS=$(command -v aws)
+
+if [ ! -f "${AWS}" ]; then
+    echo "ERROR: The aws binary does not exist."
+    echo "FIX: Please modify the \${AWS} variable in the program header."
     exit 1
 fi
 
