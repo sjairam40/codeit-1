@@ -2,7 +2,7 @@
 Removed DNSes
 =============
 bibdata-test.hz.lib.harvard.edu == dualstack.bibdata-test-1531893910.us-east-1.elb.amazonaws.com.               07/10/24
-
+cna-qa.hz.lib.harvard.edu == dualstack.cna-qa-1839740003.us-east-1.elb.amazonaws.com.                           09/10/24
 eda-iip-prod.hz.lib.harvard.edu == dualstack.eda-iip-prod-2130927775.us-east-1.elb.amazonaws.com.               08/10/24
 
 inscriptio-prod.hz.lib.harvard.edu == dualstack.inscriptio-prod-437608039.us-east-1.elb.amazonaws.com.          08/20/24

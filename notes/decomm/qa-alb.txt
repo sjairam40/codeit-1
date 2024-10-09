@@ -3,7 +3,9 @@ ALB                             TG
 ACCESS-QA                   || ACCESS-QA-HTTP-23016         26/09/24
 ACORN-QA                    || acorn-qa-https               30/08/24
 booklabeler-qa              || Booklabeler-QA
+CNA-QA                      || COLONIAL AMERICA QA          09/10/24
 Dockerised-QA               || No Listener 
+EDA-QA                      || EDA-QA                       09/10/24
 
 FTS-QA                      || FTS-QA
                             || FTS-QA-10087
