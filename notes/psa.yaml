@@ -1,0 +1,40 @@
+apiVersion: apiserver.config.k8s.io/v1
+kind: AdmissionConfiguration
+plugins:
+  - name: PodSecuritySJ
+    configuration:
+      apiVersion: pod-security.admission.config.k8s.io/v1
+      kind: PodSecurityConfiguration
+      defaults:
+        audit: restricted
+        audit-version: latest
+        enforce: baseline
+        # enforce: restricted  # Uncomment when ready to enforce ...
+        enforce-version: latest
+        warn: restricted
+        warn-version: latest
+      exemptions:
+        usernames: []
+        runtimeClasses: []
+        namespaces: 
+        - cattle-csp-adapter-system
+        - cattle-epinio-system
+        - cattle-externalip-system
+        - cattle-fleet-local-system
+        - cattle-fleet-system
+        - cattle-gatekeeper-system
+        - cattle-istio-system
+        - cattle-logging-system
+        - cattle-monitoring-system
+        - cattle-neuvector-system
+        - cattle-provisioning-capi-system
+        - cattle-sriov-system
+        - cattle-system
+        - cattle-ui-plugin-system
+        - cattle-windows-gmsa-system
+        - cis-operator-system
+        - ingress-nginx
+        - istio-system
+        - kube-system
+        - longhorn-system
+        - rancher-alerting-drivers
