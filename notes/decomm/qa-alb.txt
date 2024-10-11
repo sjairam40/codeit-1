@@ -22,6 +22,14 @@ Listview-QA                 || Listview-docker-qa-http
 mps-embed-qa                || mps-embed-qa-23018
 mps-viewer-qa               || 
 MPS-Ingest-QA               ||  MPS-Ingest-QA               07/09/2024
+MPS-ADMIN-QA                ||  MPS-ADMIN-DEV-QA-22300
+                            ||  MPS-ADMIN-QA-HTTP-22100
+                            ||  MPS-ADMIN-QA-HTTP-23003
+                            ||  MPS-ADMIN-QA-HTTP-23012
+                            ||  MPS-ADMIN-QA-HTTP-23034
+                            ||  MPS-ADMIN-QA-HTTP-23040 
+                            ||  mps-admin-qa-http-23013
+                            ||  mps-admin-qa-http-23039
 MPS-VIEWER-QA               ||  mps-viewer-qa-23017
 NRS-QA                      ||  NRS-QA-DOCKER
 nrs-qa                      ||  nrs-QA-docker
