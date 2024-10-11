@@ -1,4 +1,5 @@
 ALB                             TG                              SG
+ACCESS-PROD2                 ||  ACCESS PROD HTTP 23016                         - 10/10/24
 Acorn                        ||  acorn-prod-http            || Acorn-prod       - 26/09/24
 Booklabeler-PROD             ||  Booklabeler-prod
 EADCHECKER-PROD              ||  EADCHECKER-PROD-DOCKER
@@ -10,6 +11,15 @@ IIIF-UPDATE-QA               ||  IIIF-UPDATE-HTTP           - 08/10/24
 JOBMON-PROD                  ||  JOBMON-PROD-HTTPS
 
 LISTVIEW-DOCKER-PROD         ||  listview-docker-prod-http  - 02/09/24
+MPS-ADMIN-PROD               ||  MPS-ADMIN-PROD-HTTP-22100
+                             ||  MPS-ADMIN-PROD-HTTP-22300
+                             ||  MPS-ADMIN-PROD-HTTP-23003
+                             ||  MPS-ADMIN-PROD-HTTP-23004
+                             ||  MPS-ADMIN-PROD-HTTP-23012
+                             ||  MPS-ADMIN-PROD-HTTP-23013
+                             ||  MPS-ADMIN-PROD-HTTP-23040
+                             ||  mps-admin-prod-http-23039
+                             ||  
 NRS-PROD                     ||  NRS-PROD-DOCKER            - 30/08/24
 NRSADMIN-PROD                ||  NRSADMIN-PROD-HTTP         - 30/08/28
 MPS-EMBED-PROD               ||  
