@@ -19,7 +19,7 @@ MPS-ADMIN-PROD               ||  MPS-ADMIN-PROD-HTTP-22100
                              ||  MPS-ADMIN-PROD-HTTP-23013
                              ||  MPS-ADMIN-PROD-HTTP-23040
                              ||  mps-admin-prod-http-23039
-                             ||  
+MPS-REDIR-PROD               ||  MPS-REDIR-PROD-HTTP-23016  - 14/10/24
 NRS-PROD                     ||  NRS-PROD-DOCKER            - 30/08/24
 NRSADMIN-PROD                ||  NRSADMIN-PROD-HTTP         - 30/08/28
 MPS-EMBED-PROD               ||  
