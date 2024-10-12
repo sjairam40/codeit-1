@@ -11,6 +11,20 @@ IIIF-UPDATE-QA               ||  IIIF-UPDATE-HTTP           - 08/10/24
 JOBMON-PROD                  ||  JOBMON-PROD-HTTPS
 
 LISTVIEW-DOCKER-PROD         ||  listview-docker-prod-http  - 02/09/24
+MPS-PROD                     ||  MPS-PROD-HTTP-23002        - 14/10/24
+                             ||  MPS-PROD-HTTP-23002
+                             ||  MPS-PROD-HTTP-23015
+                             ||  MPS-PROD-HTTP-23015
+                             ||  ACCESS-PROD-HTTP-23023
+                             ||  ACCESS-PROD-HTTP-23023
+                             ||  MPS-PROD-HTTP-10008
+                             ||  MPS-PROD-10007
+                             ||  MPS-PROD-HTTP-10008
+                             ||  MPS-PROD-HTTP-23000
+                             ||  MPS-PROD-HTTP-22000
+                             ||  MPS-PROD-HTTP-23038 
+                             ||  MPS-PROD-HTTP-23042
+                             ||  MPS-PROD-HTTP-23000
 MPS-ADMIN-PROD               ||  MPS-ADMIN-PROD-HTTP-22100
                              ||  MPS-ADMIN-PROD-HTTP-22300
                              ||  MPS-ADMIN-PROD-HTTP-23003
