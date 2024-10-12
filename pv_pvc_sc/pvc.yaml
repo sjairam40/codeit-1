@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+    name: sj-pvc                       #This is the unique PVC name
+    namespace: etd-qa
+spec:
+    accessModes:
+        - ReadWriteMany
+    resources:
+        requests:
+            storage: 1Gi
+    volumeName: etd-pv
+    storageClassName: etd-qa-storage

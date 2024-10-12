@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+    name: sj-pv
+    namespace: etd-qa
+    annotations:
+        pv.kubernetes.io/provisioned-by: nfs.csi.k8s.io
+spec:
+    storageClassName: etd-qa-storage
+    capacity:
+        storage: 1Gi
+    volumeMode: Filesystem
+    accessModes:
+        - ReadWriteMany
+    persistentVolumeReclaimPolicy: Retain
+    mountOptions:
+        - nfsvers=3
+    csi:
+        driver: nfs.csi.k8s.io
+        readOnly: false
+        volumeHandle: etd-vol
+        volumeAttributes:
+            server: bos-nfsisilon.rc.fas.harvard.edu
+            share: /ifs/bosisilon/huit/lts-docker-prod/k8-lzp/etdadm-qa
