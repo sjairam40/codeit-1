@@ -9,5 +9,5 @@ spec:
     resources:
         requests:
             storage: 1Gi
-    volumeName: etd-pv
+    volumeName: sj-pv
     storageClassName: etd-qa-storage
