@@ -8,8 +8,8 @@ spec:
     image: nginx
     volumeMounts:
     - mountPath: "/mnt/test"
-      name: my-volume
+      name: etd-volume
   volumes:
-  - name: my-volume
+  - name: etd-volume
     persistentVolumeClaim:
       claimName: etd-pvc
