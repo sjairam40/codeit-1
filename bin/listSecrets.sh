@@ -2,13 +2,31 @@
 # 01 - initial - jairams
 # 02 - Add AWS CLI check
 
-# Check if aws cli is installed
-if ! command -v aws &> /dev/null; then
-    echo "AWS CLI not found. Please install AWS CLI first."
+AWS=$(command -v aws)
+JQ=$(command -v jp)
+
+## AWS
+# Check to make sure a aws utility is available
+if [ ! -f "${AWS}" ]; then
+    echo "ERROR: The aws binary does not exist."
+    echo "FIX: Please modify the \${AWS} variable in the program header."
     exit 1
 fi
 
-clear
+## ECHO
+# # Check to make sure a echo utility is available
+# if [ ! -f "${ECHO}" ]; then
+#      ${ECHO} "ERROR: The echo binary does not exist in ${ECHO} ."
+#    echo "FIX: Please modify the \${ECHO} variable in the program header."
+#    exit 1
+# fi
+
+## JQ
+# if [ ! -f "${JQ}" ]; then
+#     echo "ERROR: The jq binary does not exist."
+#     echo "FIX: Please modify the \${JQ} variable in the program header."
+#     exit 1
+# fi
 
 # Displays help options. 
 Help()
@@ -24,7 +42,6 @@ Help()
    echo
 }
 
-
 # Function to list all secrets
 list_all_secrets() {
     aws secretsmanager list-secrets --query 'SecretList[*].Name' --output text
@@ -39,6 +56,7 @@ describe_secret() {
     echo "$secret_value" | jq
 }
 
+# Find the whitespaces
 find_whitespaces() {
      local secret_name="$1"
      string=$(aws secretsmanager get-secret-value --secret-id "$secret_name" |  jq --raw-output '.SecretString')
