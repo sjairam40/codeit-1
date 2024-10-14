@@ -1,9 +1,10 @@
   #!/bin/bash
 # 01 - initial - jairams
 # 02 - Add AWS CLI check
+# 03 - Add jq check
 
 AWS=$(command -v aws)
-JQ=$(command -v jp)
+JQ=$(command -v jq)
 
 ## AWS
 # Check to make sure a aws utility is available
@@ -13,20 +14,12 @@ if [ ! -f "${AWS}" ]; then
     exit 1
 fi
 
-## ECHO
-# # Check to make sure a echo utility is available
-# if [ ! -f "${ECHO}" ]; then
-#      ${ECHO} "ERROR: The echo binary does not exist in ${ECHO} ."
-#    echo "FIX: Please modify the \${ECHO} variable in the program header."
-#    exit 1
-# fi
-
-## JQ
-# if [ ! -f "${JQ}" ]; then
-#     echo "ERROR: The jq binary does not exist."
-#     echo "FIX: Please modify the \${JQ} variable in the program header."
-#     exit 1
-# fi
+# JQ
+if [ ! -f "${JQ}" ]; then
+    echo "ERROR: The jq binary does not exist."
+    echo "FIX: Please modify the \${JQ} variable in the program header."
+    exit 1
+fi
 
 # Displays help options. 
 Help()
