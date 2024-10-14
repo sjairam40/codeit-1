@@ -4,7 +4,10 @@ kind: StorageClass
 metadata:
   annotations:
     field.cattle.io/description: sanjsy sc
-  creationTimestamp: '2024-10-12T18:41:10Z'
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"allowVolumeExpansion":false,"apiVersion":"storage.k8s.io/v1","kind":"StorageClass","metadata":{"annotations":{"field.cattle.io/description":"sanjsy
+      sc"},"creationTimestamp":"2024-10-12T18:41:10Z","managedFields":[{"apiVersion":"storage.k8s.io/v1","fieldsType":"FieldsV1","fieldsV1":{"f:allowVolumeExpansion":{},"f:metadata":{"f:annotations":{".":{},"f:field.cattle.io/description":{}}},"f:mountOptions":{},"f:parameters":{".":{},"f:fileSystemId":{},"f:server":{},"f:share":{}},"f:provisioner":{},"f:reclaimPolicy":{},"f:volumeBindingMode":{}},"manager":"rancher","operation":"Update","time":"2024-10-12T19:07:02Z"}],"name":"etd-int-sc"},"mountOptions":["hard","nfsvers=3","port=2049","timeo=600"],"parameters":{"fileSystemId":"bos-nfsisilon","server":"bos-nfsisilon.rc.fas.harvard.edu","share":"/etdadm-qa"},"provisioner":"nfs.csi.k8s.io","reclaimPolicy":"Retain","volumeBindingMode":"Immediate"}
+  creationTimestamp: '2024-10-13T19:45:28Z'
   managedFields:
     - apiVersion: storage.k8s.io/v1
       fieldsType: FieldsV1
@@ -14,6 +17,7 @@ metadata:
           f:annotations:
             .: {}
             f:field.cattle.io/description: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
         f:mountOptions: {}
         f:parameters:
           .: {}
@@ -23,10 +27,12 @@ metadata:
         f:provisioner: {}
         f:reclaimPolicy: {}
         f:volumeBindingMode: {}
-      manager: rancher
+      manager: kubectl-client-side-apply
       operation: Update
-      time: '2024-10-12T19:07:02Z'
+      time: '2024-10-13T19:45:28Z'
   name: etd-int-sc
+  resourceVersion: '3961585'
+  uid: ce9265d2-1ade-4cc9-9365-2360222e5cbe
 mountOptions:
   - hard
   - nfsvers=3
