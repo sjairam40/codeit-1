@@ -1,0 +1,52 @@
+#!/bin/bash
+# v0.1 - Initial version
+
+clear
+
+AWS=$(command -v aws)
+JQ=$(command -w jq)
+
+
+if [ ! -f "${AWS}" ]; then
+    echo "ERROR: The aws binary does not exist."
+    echo "FIX: Please modify the \${AWS} variable in the program header."
+    exit 1
+fi
+
+# JQ
+if [ ! -f "${JQ}" ]; then
+    echo "ERROR: The jq binary does not exist."
+    echo "FIX: Please modify the \${JQ} variable in the program header."
+    exit 1
+fi
+
+
+# Function to extract the DLQ ARN
+get_dlq_arn() {
+  local queue_url=$1
+  attributes=$(aws sqs get-queue-attributes --queue-url "$queue_url" --attribute-names RedrivePolicy --output json)
+  dlq_arn=$(echo "$attributes" | jq -r '.Attributes.RedrivePolicy // empty' | jq -r '.deadLetterTargetArn // empty')
+  
+  if [ -n "$dlq_arn" ]; then
+    echo "$dlq_arn"
+  else
+    echo "No DLQ defined"
+  fi
+}
+
+
+###################
+###################
+
+# Get the list of SQS queue URLs
+queue_urls=$(aws sqs list-queues --output json | jq -r '.QueueUrls[]')
+
+# Loop through each SQS queue and check for DLQ
+for queue_url in $queue_urls; do
+  queue_name=$(echo "$queue_url" | awk -F'/' '{print $NF}')
+  dlq_arn=$(get_dlq_arn "$queue_url")
+  
+  echo "Queue: $queue_name"
+  echo "Dead Letter Queue ARN: $dlq_arn"
+  echo "------------------------"
+done
