@@ -4,11 +4,17 @@ clear
 
 AWS=$(command -v aws)
 
+## AWS
+# Check to make sure a aws utility is available
 if [ ! -f "${AWS}" ]; then
     echo "ERROR: The aws binary does not exist."
     echo "FIX: Please modify the \${AWS} variable in the program header."
     exit 1
 fi
+
+###################
+###################
+
 # Verify that an instance ID is provided.
 if [ -z "$1" ]; then
   echo "Usage: $0 <instance-id>"
