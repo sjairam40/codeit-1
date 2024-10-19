@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+    name: solr-dev-pvc                       #This is the unique PVC name
+    namespace: solroperator
+spec:
+    accessModes:
+        - ReadWriteMany
+    resources:
+        requests:
+            storage: 1Gi
+    volumeName: solr-vol
+    storageClassName: solr-dev-storage
