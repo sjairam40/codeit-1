@@ -3,7 +3,6 @@ cluster-console.dev.lib.harvard.edu 443
 cluster-console.qa.lib.harvard.edu 443
 cluster-console.prod.lib.harvard.edu 443
 cluster-console.sand.lib.harvard.edu 443
-cluster-console.sand2.lib.harvard.edu 443
 deployment.dev.lib.harvard.edu 443
 deployment.prod.lib.harvard.edu 443
 deployment.qa.lib.harvard.edu 443
