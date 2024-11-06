@@ -46,6 +46,9 @@ MPS-VIEWER-PROD              ||  MPS-VIEWER-PROD
 pds-alb-prod                 ||  pds-alb-prod-http           10/09/2024
                              ||  pds-alb-prod-https
                              ||  pds-prod-alb-9005
+PDS-ALB-PROD                 ||  PDS-ALB-PROD-HTTP                          - 06/11/24
+                             ||  PDS-ALB-PROD-HTTPS
+                             ||  PDS-PROD-ALB-9005
 PDS-PROD1                    ||  PDS-PROD-10005                             - 05/11/24
                              ||  PDS-PROD-10006
 Policy-Admin-PROD            ||  policy-admin-prod-9013
