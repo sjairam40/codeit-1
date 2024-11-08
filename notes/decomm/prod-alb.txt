@@ -52,3 +52,5 @@ PDS-ALB-PROD                 ||  PDS-ALB-PROD-HTTP                          - 06
 PDS-PROD1                    ||  PDS-PROD-10005                             - 05/11/24
                              ||  PDS-PROD-10006
 Policy-Admin-PROD            ||  policy-admin-prod-9013
+SDS-CS-PROD-860848582        ||  SDS-CS-PROD-HTTPS                          - 08/11/24
+SDS-PRE-PROD                 ||  SDS-PRE-PROD-HTTP-23016                    - 08/11/24
