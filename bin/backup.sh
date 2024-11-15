@@ -166,9 +166,9 @@ echo " --> Copy zz-home"
 cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copy zz-notes"
-cp -R zz-notes* /Volumes/Data2024/Documents-$month-2024/
-sleep $timeSec
+# echo " --> Copy zz-notes"
+# cp -R zz-notes* /Volumes/Data2024/Documents-$month-2024/
+# sleep $timeSec
 
 echo " --> Copy Installed"
 cp -R zz-installed* /Volumes/Data2024/Documents-$month-2024/

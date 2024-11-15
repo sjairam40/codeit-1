@@ -19,3 +19,10 @@ kubectl rollout restart deployment notifier -n dais
 kubectl rollout restart deployment rabbitmq-email-notifier -n dais
 
 kubectl rollout restart deployment transfer-service -n dais
+
+# EDA
+
+kubectl rollout restart deployment eda -n eda
+
+kubectl rollout restart deployment eda-iip -n eda
+
