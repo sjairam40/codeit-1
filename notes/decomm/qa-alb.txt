@@ -11,8 +11,8 @@ drsmdsrv-QA                 || drsmdsrv-qa                  10/10/24
 DATABOARD QA                || DATBOARD-QA-10401            13/11/24
 DCP-QA                      || dcp-qa                       09/10/24
 DOCKERISED TOOLS QA         ||                              09/10/24
-DRS-MESSAGE-QA              || DRS-MESSAGE-QA   
-                            || DRS-MESSAGE-QA-1880 
+DRS-MESSAGE-QA              || DRS-MESSAGE-QA               18/11/24
+                            || DRS-MESSAGE-QA-1880          18/11/24
 FTS-QA                      || FTS-QA
                             || FTS-QA-10087
 IDS-QA                      || IDS-QA-HTTP
