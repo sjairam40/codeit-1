@@ -5,6 +5,7 @@ ACORN-QA                    || acorn-qa-https               30/08/24
 booklabeler-qa              || Booklabeler-QA
 CNA-QA                      || COLONIAL AMERICA QA          09/10/24
 Dockerised-QA               || No Listener 
+DRSMDSRV-QA                 || DRSMDSSRV-QA                 20/11/24
 EDA-QA                      || EDA-QA                       09/10/24
 EDA-SOLR-QA                 || EDA-SOLR-QA                  08/11/24
 drsmdsrv-QA                 || drsmdsrv-qa                  10/10/24
