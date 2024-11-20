@@ -166,10 +166,6 @@ echo " --> Copy zz-home"
 cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-# echo " --> Copy zz-notes"
-# cp -R zz-notes* /Volumes/Data2024/Documents-$month-2024/
-# sleep $timeSec
-
 echo " --> Copy Installed"
 cp -R zz-installed* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
@@ -196,6 +192,10 @@ sleep $timeSec
 
 echo " ###>> Going to Movies"
 cd ~/Movies
+
+echo " --> Going to 00-personal"
+cp -R 0-personal* /Volumes/Data2024/Documents-$month-2024/Movies
+sleep $timeSec
 
 echo " --> Going to 07"
 cp -R 0723* /Volumes/Data2024/Documents-$month-2024/Movies

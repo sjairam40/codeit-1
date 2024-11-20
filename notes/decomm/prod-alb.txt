@@ -1,7 +1,10 @@
 ALB                             TG                              SG
 ACCESS-PROD2                 ||  ACCESS PROD HTTP 23016                         - 10/10/24
-Acorn                        ||  acorn-prod-http            || Acorn-prod       - 26/09/24
+Acorn                        ||  Acorn-prod                                     - 26/09/24
+                             ||  acorn-prod-http  
 Booklabeler-PROD             ||  Booklabeler-prod
+DRS-MESSAGE-QUEUE-PROD       ||  DRS-MESSAGE-QUEUE-PROD                         - 20/11/24
+                             ||  DRS-MESSAGE-QUEUE-PROD-10880 
 DRS-MetadataDeliverySrv-Prod ||  drsmdsrv-prod-http                             - 19/11/24
                              ||  drsmdsrv-prod-https
 DRS-METADATADELIVERYSRV-PROD ||  DRSMDSRV-PROD-HTTP                             - 19/11/24
@@ -58,6 +61,6 @@ PDS-PROD1                    ||  PDS-PROD-10005                             - 05
 Policy-Admin-PROD            ||  policy-admin-prod-9013
 SDS-CS-PROD-860848582        ||  SDS-CS-PROD-HTTPS                          - 08/11/24
 SDS-PRE-PROD                 ||  SDS-PRE-PROD-HTTP-23016                    - 08/11/24
-WORDSHACK-PROD               ||  WORDSHACK-PROD                             - 18/11/24
+WORDSHACK-PROD               ||  WORDSHACK-PROD                             - 20/11/24
                              ||  WORDSHACK-PROD-9038
                              ||  WORDSHACK-PROD-9038-1
