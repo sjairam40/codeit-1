@@ -194,7 +194,7 @@ echo " ###>> Going to Movies"
 cd ~/Movies
 
 echo " --> Going to 00-personal"
-cp -R 0-personal* /Volumes/Data2024/Documents-$month-2024/Movies
+cp -R 00-personal* /Volumes/Data2024/Documents-$month-2024/Movies
 sleep $timeSec
 
 echo " --> Going to 07"
