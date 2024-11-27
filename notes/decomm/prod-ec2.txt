@@ -14,3 +14,12 @@ Stopped
 
 Wordshack 1                          - 19/11/24
 Wordshack 2                          - 19/11/24
+
+Deleted 
+
+Wordshack 1                         - 27/11/24
+Wordshack 2                         - 27/11/24
+
+Volumes:  vol-0d2e56a7ef867ae41 &  vol-085dec44df2f6d492
+
+Volumes:  vol-0d2e56a7ef867ae41 & vol-04a4fe722c4d144bd
