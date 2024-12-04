@@ -12,6 +12,10 @@ deployment.prod.lib.harvard.edu 443
 github.huit.harvard.edu 443
 huit.harvard.edu 443
 jira.huit.harvard.edu 443
+logs.sand.lib.harvard.edu 443
+logs.dev.lib.harvard.edu 443
+logs.qa.lib.harvard.edu 443
+logs.prod.lib.harvard.edu 443
 nrs.harvard.edu 443
 web.calists.harvard.edu 443
 www.oteemo.com 443
