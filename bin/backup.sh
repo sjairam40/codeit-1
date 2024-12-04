@@ -22,6 +22,7 @@ then
     mkdir Documents-$month-2024/Desktop
     mkdir Documents-$month-2024/Pictures
     mkdir Documents-$month-2024/Movies
+    mkdir Documents-$month-2024/ZZZ-SOFTWARE
 else 
     echo " --> Folder exists"
 fi
@@ -106,9 +107,9 @@ echo " --> Copy DEMO"
 cp -R DEMOS /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copy D&G"
-cp -R Domestic* /Volumes/Data2024/Documents-$month-2024/
-sleep $timeSec
+# echo " --> Copy D&G"
+# cp -R Domestic* /Volumes/Data2024/Documents-$month-2024/
+# sleep $timeSec
 
 # echo " --> Copy GitHub"
 # cp -R GitHub* /Volumes/Data2024/Documents-$month-2024/
@@ -167,7 +168,7 @@ cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copy Installed"
-cp -R zz-installed* /Volumes/Data2024/Documents-$month-2024/
+cp -R ZZZ-SOFTWAREZ/rebuild-apps/* /Volumes/Data2024/Documents-$month-2024/ZZZ-SOFTWARE
 sleep $timeSec
 
 echo " ###>> Going to Pictures"
