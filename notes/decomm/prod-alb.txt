@@ -3,6 +3,8 @@ ACCESS-PROD2                 ||  ACCESS PROD HTTP 23016                         
 Acorn                        ||  Acorn-prod                                     - 26/09/24
                              ||  acorn-prod-http  
 Booklabeler-PROD             ||  Booklabeler-prod
+
+DOCKERIZED-TOOLS-PROD        ||  DOCKERISED-HDFORMS                             - 04/12/24
 DRS-MESSAGE-QUEUE-PROD       ||  DRS-MESSAGE-QUEUE-PROD                         - 20/11/24
                              ||  DRS-MESSAGE-QUEUE-PROD-10880 
 DRS-MetadataDeliverySrv-Prod ||  drsmdsrv-prod-http                             - 19/11/24
@@ -21,7 +23,7 @@ iiif-update-prod             ||  iiif-update-prod-http                          
 IIIF-UPDATE-PROD             ||  IIIF-UPDATE-PROD-HTTP                          - 24/10/24
 
 JOBMON-PROD                  ||  JOBMON-PROD-HTTPS
-
+LC-RIGHTS-PROD               ||  LC-RIGHTS                                      - 04/12/24
 LISTVIEW-DOCKER-PROD         ||  listview-docker-prod-http  - 02/09/24
 MPS-PROD                     ||  MPS-PROD-HTTP-23002        - 14/10/24
                              ||  MPS-PROD-HTTP-23002
