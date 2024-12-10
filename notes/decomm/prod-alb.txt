@@ -21,8 +21,9 @@ IDS-PROD                     ||  IDS-PROD-HTTPS                                 
 IDS-PROD-REDIRECTS           ||  IDS-REDIRECTS-PROD-HTTPS-23019                 - 22/10/24
 iiif-update-prod             ||  iiif-update-prod-http                          - 24/10/24
 IIIF-UPDATE-PROD             ||  IIIF-UPDATE-PROD-HTTP                          - 24/10/24
-
+internal-librarycloud-api    ||  lc-api                                         - 10/12/24
 JOBMON-PROD                  ||  JOBMON-PROD-HTTPS
+LIBRARYCLOUD-api             ||  LC-API                                         - 10/12/24
 LC-RIGHTS-PROD               ||  LC-RIGHTS                                      - 04/12/24
 LISTVIEW-DOCKER-PROD         ||  listview-docker-prod-http  - 02/09/24
 MPS-PROD                     ||  MPS-PROD-HTTP-23002        - 14/10/24
@@ -63,6 +64,7 @@ PDS-PROD1                    ||  PDS-PROD-10005                             - 05
 Policy-Admin-PROD            ||  policy-admin-prod-9013
 SDS-CS-PROD-860848582        ||  SDS-CS-PROD-HTTPS                          - 08/11/24
 SDS-PRE-PROD                 ||  SDS-PRE-PROD-HTTP-23016                    - 08/11/24
+SUITESPOT                    ||  SUITESPOT-PROD                             - 06/12/24
 WORDSHACK-PROD               ||  WORDSHACK-PROD                             - 20/11/24
                              ||  WORDSHACK-PROD-9038
                              ||  WORDSHACK-PROD-9038-1
