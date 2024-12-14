@@ -167,7 +167,7 @@ echo " --> Copy zz-home"
 cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copy Installed"
+echo " --> Copy ZZZ-Software"
 cp -R ZZZ-SOFTWAREZ/rebuild-apps/* /Volumes/Data2024/Documents-$month-2024/ZZZ-SOFTWARE
 sleep $timeSec
 
