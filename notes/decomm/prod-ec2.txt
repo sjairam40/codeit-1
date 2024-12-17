@@ -1,25 +1,45 @@
 
 Stopped
-
+=======
 Feedback Prod 1                      - 14/11/24
 Feedback Prod 2                      - 14/11/24
 
 Deleted 
-
+=======
 Feedback Prod 1                      - 25/11/24
 Feedback Prod 2                      - 25/11/24
 
 
 Stopped
-
+=======
 Wordshack 1                          - 19/11/24
 Wordshack 2                          - 19/11/24
 
 Deleted 
-
+=======
 Wordshack 1                         - 27/11/24
 Wordshack 2                         - 27/11/24
 
 Volumes:  vol-0d2e56a7ef867ae41 &  vol-085dec44df2f6d492
-
 Volumes:  vol-0d2e56a7ef867ae41 & vol-04a4fe722c4d144bd
+
+
+TO Delete
+=========
+Library Cloud API 
+Instance id: i-03b8a3508a592de98
+Disk : vol-02530e34461b88016 & vol-0a5e26b20b25bd935
+
+TO Delete
+=========
+Docker Swarm 6
+Instance id:  i-043ed7799ba8835ce
+Disk vol-0a61a978c0f4dea2f & vol-0d097571d56df60a6 & vol-019216226bdb820da
+
+Docker Swarm 5 
+Instance id: i-06805253be2a353d4
+Disk vol-0552c1d0162c4bb1c & vol-01d4b4a11bc628321 & vol-042177a81075968ce 
+
+Docker Swarm 4
+Instance id:  i-079cbfc1cb5c06437
+Disk : vol-06954c6514cdd6131 & vol-0f599411814446229 & vol-0312d87a2cc36bb31
