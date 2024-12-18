@@ -26,7 +26,7 @@ Volumes:  vol-0d2e56a7ef867ae41 & vol-04a4fe722c4d144bd
 
 TO Delete
 =========
-Library Cloud API 
+Library Cloud PROD API 
 Instance id: i-03b8a3508a592de98
 Disk : vol-02530e34461b88016 & vol-0a5e26b20b25bd935
 
@@ -48,5 +48,13 @@ Disk vol-0a61a978c0f4dea2f & vol-0d097571d56df60a6 & vol-019216226bdb820da
 STOPPED                             - 18/10/24
 =======
 Docker Swarm 1
+Instance id: i-05416b7fd1bc8e3ae
+Disk : vol-06befe563ed4b704e & vol-070c6f2a1edb0914c & vol-0266bea79771e70e8
+
 Docker Swarm 2
+Instance id: i-0beae8a451b2ac2e5
+Disk : vol-06f04746f4679a0bd & vol-0d9a2326264567a03 & vol-090fa3ddd53247864
+
 Docker Swarm 3 
+Instance id: i-092710386aa284482
+Disk : vol-0ac4e794b5a81008b & vol-05520834aa30ca1f3 & vol-0702194064dccf37c
