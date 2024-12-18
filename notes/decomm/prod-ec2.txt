@@ -30,16 +30,23 @@ Library Cloud API
 Instance id: i-03b8a3508a592de98
 Disk : vol-02530e34461b88016 & vol-0a5e26b20b25bd935
 
-TO Delete
-=========
-Docker Swarm 6
-Instance id:  i-043ed7799ba8835ce
-Disk vol-0a61a978c0f4dea2f & vol-0d097571d56df60a6 & vol-019216226bdb820da
+DELETED                             - 18/12/24
+=======
+Docker Swarm 4
+Instance id:  i-079cbfc1cb5c06437
+Disk : vol-06954c6514cdd6131 & vol-0f599411814446229 & vol-0312d87a2cc36bb31
 
 Docker Swarm 5 
 Instance id: i-06805253be2a353d4
 Disk vol-0552c1d0162c4bb1c & vol-01d4b4a11bc628321 & vol-042177a81075968ce 
 
-Docker Swarm 4
-Instance id:  i-079cbfc1cb5c06437
-Disk : vol-06954c6514cdd6131 & vol-0f599411814446229 & vol-0312d87a2cc36bb31
+Docker Swarm 6
+Instance id:  i-043ed7799ba8835ce
+Disk vol-0a61a978c0f4dea2f & vol-0d097571d56df60a6 & vol-019216226bdb820da
+
+
+STOPPED                             - 18/10/24
+=======
+Docker Swarm 1
+Docker Swarm 2
+Docker Swarm 3 
