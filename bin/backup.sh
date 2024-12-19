@@ -107,10 +107,6 @@ echo " --> Copy DEMO"
 cp -R DEMOS /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-# echo " --> Copy D&G"
-# cp -R Domestic* /Volumes/Data2024/Documents-$month-2024/
-# sleep $timeSec
-
 # echo " --> Copy GitHub"
 # cp -R GitHub* /Volumes/Data2024/Documents-$month-2024/
 # sleep $timeSec
@@ -139,8 +135,12 @@ echo " --> Copy K*"
 cp -R K* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copy Orca"
-cp -R ORCA* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copy N*"
+cp -R N* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
+echo " --> Copy O*"
+cp -R O* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copy P*"
