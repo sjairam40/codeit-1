@@ -30,20 +30,23 @@ Library Cloud PROD API
 Instance id: i-03b8a3508a592de98
 Disk : vol-02530e34461b88016 & vol-0a5e26b20b25bd935
 
-DELETED                             - 18/12/24
+DELETED                             - 19/12/24
 =======
-Docker Swarm 4
+Docker Swarm 3 
+Instance id: i-092710386aa284482
+Disk : vol-0ac4e794b5a81008b & vol-05520834aa30ca1f3 & vol-0702194064dccf37c
+
+Docker Swarm 4                      - 18/12/24
 Instance id:  i-079cbfc1cb5c06437
 Disk : vol-06954c6514cdd6131 & vol-0f599411814446229 & vol-0312d87a2cc36bb31
 
-Docker Swarm 5 
+Docker Swarm 5                      - 18/12/24
 Instance id: i-06805253be2a353d4
 Disk vol-0552c1d0162c4bb1c & vol-01d4b4a11bc628321 & vol-042177a81075968ce 
 
-Docker Swarm 6
+Docker Swarm 6                      - 18/12/24
 Instance id:  i-043ed7799ba8835ce
 Disk vol-0a61a978c0f4dea2f & vol-0d097571d56df60a6 & vol-019216226bdb820da
-
 
 STOPPED                             - 18/10/24
 =======
@@ -54,7 +57,3 @@ Disk : vol-06befe563ed4b704e & vol-070c6f2a1edb0914c & vol-0266bea79771e70e8
 Docker Swarm 2
 Instance id: i-0beae8a451b2ac2e5
 Disk : vol-06f04746f4679a0bd & vol-0d9a2326264567a03 & vol-090fa3ddd53247864
-
-Docker Swarm 3 
-Instance id: i-092710386aa284482
-Disk : vol-0ac4e794b5a81008b & vol-05520834aa30ca1f3 & vol-0702194064dccf37c
