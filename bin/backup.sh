@@ -91,6 +91,10 @@ echo " --> Copying A*"
 cp -R A* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
+echo " --> Copying B*"
+cp -R B* /Volumes/Data2024/Documents-$month-2024/
+sleep $timeSec
+
 echo " --> Copying C*"
 cp -R C* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
@@ -163,8 +167,8 @@ echo " --> Copy Zoom"
 cp -R Zoom* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
-echo " --> Copy zz-home"
-cp -R zz-home* /Volumes/Data2024/Documents-$month-2024/
+echo " --> Copy zz-apps-zzz"
+cp -R zz-apps-zz* /Volumes/Data2024/Documents-$month-2024/
 sleep $timeSec
 
 echo " --> Copy ZZZ-Software"
