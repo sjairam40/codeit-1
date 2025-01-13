@@ -1,0 +1,43 @@
+#ARGOCD
+alias al1='argocd login cluster-console.sand.lib.harvard.edu:30446'
+alias al2='argocd login cluster-console.sand2.lib.harvard.edu:30446'
+alias awsS='aws ssm start-session --target'
+alias aedll='aws elbv2 describe-listeners --load-balancer-arn'
+alias aedtg='aws elbv2 describe-target-groups --load-balancer-arn'
+
+#Names
+alias cms='cattle-monitoring-system'
+alias codeit='cd ~/Documents/GitHub/PERS/codeit/bin/'
+alias duck='du -cks * | sort -rn | head'
+alias gith='cd ~/Documents/GitHub'
+alias h='/opt/homebrew/bin/helm'
+
+alias k='/usr/local/bin/kubectl'
+alias kga='kubectl getl all'
+
+#KUBERNETES
+alias kgc='kubectl get cm'
+alias kgp='kubectl get pods'
+alias kx='/opt/homebrew/bin/kubectx'
+alias kn='/opt/homerew/bin/kubens'
+alias Har='cd ~/00-GIT-00/HARVARD'
+
+alias plgl='k -n loki get all'
+#alias popeye='cd /Users/sjairam/Documents/GitHub/TOOLS/popeye; go run main.go'
+
+alias ssl='cd /Users/sjairam/Documents/GitHub/PERS/codeit'
+alias sslM='cd /Users/sjairam/Documents/GitHub/PERS/codeit; ./bin/sslCheck.sh -f mexico'
+
+#TERRAFORM
+alias t='/usr/local/bin/terraform'
+alias tiaalb='terraform import aws_lb.example'
+alias tiall='terraform import aws_lb_listener.imported_listener'
+alias tiatg='terraform import aws_lb_target_group.imported_tg'
+
+alias getEC2='aws ec2 describe-instances --filters "Name=tag:Name,Values=*rke2*" '
+
+alias sshh='ssh-add ~/.ssh/id_harvard'
+alias ssho1='ssh-add ~/.ssh/id_ed25519'
+alias ssho2='ssh-add ~/.ssh/id_oteemo'
+alias ssho3='ssh-add ~/.ssh/id_rsa_202409'
+alias sshp='ssh-add ~/.ssh/id_rsa'
