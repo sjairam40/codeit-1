@@ -1,25 +1,24 @@
-#eval "$(starship init bash)"
-#eval "$(logcli --completion-script-bash)"
-
-. .bash_profile
+ssh-add --apple-load-keychain ~/.ssh/id_harvard
 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-echo " Load kube config"
 export KUBECONFIG=~/.kube/config
 export PATH="/usr/local/bin:$PATH"
-# Add KREW to path
+
+## Add KREW to path
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/kubectl-plugin:$PATH"
 
-# Add codeit/bin to PATH
+##Add codeit/bin to PATH
 export PATH=$PATH:/Users/sjairam/Documents/GitHub/PERS/codeit/bin
+
 ##Add .scripts to PATH
 export PATH=$PATH:/Users/sjairam/.scripts
+
 #KUBECTL Plugins
 export PATH=$PATH:/Users/sjairam/Documents/GitHub/TOOLS/kubectl-plugins
-echo " --> added kubectl plugins"
+echo " Added kubectl plugins"
 
 export PATH=$PATH:/usr/local/bin/:/opt/homebrew/bin/
 ## KUBE PS1
@@ -28,21 +27,24 @@ PS1='$(kube_ps1)'$PS1
 echo "Added kube ps"
 
 ## Add Istio 1.22.6 to PATH
-#export PATH=$PATH:/Users/sjairam/istio-1.22.6/bin
-#echo " added istio 1.22.6"
+export PATH=$PATH:/Users/sjairam/istio-1.22.6/bin
+echo " added istio 1.22.6"
 
-## Add Istio 1.22.7 to PATH
-#export PATH=$PATH:/Users/sjairam/istio-1.22.7/bin
-#echo " added istio 1.22.7"
+# ## Add Istio 1.22.7 to PATH
+# #export PATH=$PATH:/Users/sjairam/istio-1.22.7/bin
+# #echo " added istio 1.22.7"
+
 
 # ## Add Istio 1.23.4 to PATH
 # #export PATH=$PATH:/Users/sjairam/istio-1.23.4/bin
 # #echo " added istio 1.23.4"
 
 ## Add Istio 1.24.2 to PATH
-export PATH=$PATH:/Users/sjairam/istio-1.24.2/bin
-echo " added istio 1.24.2"
-echo " --> added scripts"
+#export PATH=$PATH:/Users/sjairam/istio-1.24.2/bin
+#echo " added istio 1.24.2"
+
+#ALERTMANAGER
+export PATH=$PATH:/Users/sjairam/Documents/GitHub/TOOLS/alertmanager
 
 echo " Load keys"
 ssh-add ~/.ssh/id_harvard
@@ -62,3 +64,4 @@ export PATH="$PATH:/Users/sjairam/.local/bin"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 ### export PATH="/Users/sjairam/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+source <(alias s=switch)
