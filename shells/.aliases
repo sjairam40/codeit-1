@@ -19,7 +19,7 @@ alias kga='kubectl getl all'
 alias kgc='kubectl get cm'
 alias kgp='kubectl get pods'
 alias kx='/opt/homebrew/bin/kubectx'
-alias kn='/opt/homerew/bin/kubens'
+alias kn='/opt/homebrew/bin/kubens'
 alias Har='cd ~/00-GIT-00/HARVARD'
 
 alias plgl='k -n loki get all'
