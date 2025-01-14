@@ -3,7 +3,7 @@ clusters:
 - cluster:
     certificate-authority: dev.crt
     server: https://cluster-console.dev.lib.harvard.edu/k8s/clusters/local
-  name: devlocal
+  name: devcluster
 - cluster:
     certificate-authority: local.crt
     server: https://cluster-console.local.lib.harvard.edu/k8s/clusters/local
@@ -34,8 +34,8 @@ clusters:
   name: sandbox3
 contexts:
 - context:
-    cluster: devlocal
-    namespace: kafka
+    cluster: devcluster
+    namespace: airflow
     user: devusr
   name: dev
 - context:
@@ -55,12 +55,12 @@ contexts:
   name: prod
 - context:
     cluster: qalocal
-    namespace: booklabeler
+    namespace: jstor
     user: qausr
   name: qa
 - context:
     cluster: sandbox1
-    namespace: istio-system
+    namespace: cattle-system
     user: sandbox1usr
   name: sandbox1
 - context:
@@ -73,7 +73,7 @@ contexts:
     namespace: istio-system
     user: sandbox3usr
   name: sandbox3
-current-context: dev
+current-context: sandbox1
 kind: Config
 preferences: {}
 users:
@@ -91,7 +91,7 @@ users:
     token: kubeconfig-user-cpzrlrwtwz:zrr57tvpwg4fdf9slcvl782p46czjphlbn96pkscmhzswzvh8f7qtp
 - name: qausr
   user:
-    token: kubeconfig-u-hn42ymipu7rslmw:fj4x47hmdb2hclr5fldvhf55fjc26lpmtvvkvc6b8fljv24g2625m5
+    token: kubeconfig-u-hn42ymipu7m6qjx:gkbvlbmkgvhtg9wjg6hcgb2q626znfk7fff68jvlt9nfmb9pkjnbwr
 - name: sandbox1usr
   user:
     token: kubeconfig-user-xkv8wwp2kj:p79lgjcr2jngwsbwgd5qhgwpjjngjvt7hvbscrsv586q4mzmzp5l89
