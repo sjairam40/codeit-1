@@ -24,6 +24,7 @@ brew 'hyperkit'
 # JQ command line for JSON 
 brew 'jq'
 # KUBECTL from kubernetes.io
+brew 'k8sgpt'
 brew 'k9s'
 brew 'kubectl'
 brew 'kubectx'
