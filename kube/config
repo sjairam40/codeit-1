@@ -1,0 +1,103 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: dev.crt
+    server: https://cluster-console.dev.lib.harvard.edu/k8s/clusters/local
+  name: devlocal
+- cluster:
+    certificate-authority: local.crt
+    server: https://cluster-console.local.lib.harvard.edu/k8s/clusters/local
+  name: local
+- cluster:
+    certificate-authority: lzprod.crt
+    server: https://cluster-console.lz-prod.lib.harvard.edu/k8s/clusters/local
+  name: lzprod
+- cluster:
+    certificate-authority: prod.crt
+    server: https://cluster-console.prod.lib.harvard.edu/k8s/clusters/local
+  name: prod
+- cluster:
+    certificate-authority: qa.crt
+    server: https://cluster-console.qa.lib.harvard.edu/k8s/clusters/local
+  name: qalocal
+- cluster:
+    certificate-authority: sandbox1.crt
+    server: https://cluster-console.sand.lib.harvard.edu/k8s/clusters/local
+  name: sandbox1
+- cluster:
+    certificate-authority: sandbox2.crt
+    server: https://cluster-console.sand2.lib.harvard.edu
+  name: sandbox2
+- cluster:
+    certificate-authority: sandbox3.crt
+    server: https://cluster-console.sand3.lib.harvard.edu/k8s/clusters/local
+  name: sandbox3
+contexts:
+- context:
+    cluster: devlocal
+    namespace: kafka
+    user: devusr
+  name: dev
+- context:
+    cluster: local
+    namespace: istio-system
+    user: localusr
+  name: local
+- context:
+    cluster: lzprod
+    namespace: dais
+    user: lz-prod-usr
+  name: lzprod
+- context:
+    cluster: prod
+    namespace: sds
+    user: produsr
+  name: prod
+- context:
+    cluster: qalocal
+    namespace: booklabeler
+    user: qausr
+  name: qa
+- context:
+    cluster: sandbox1
+    namespace: istio-system
+    user: sandbox1usr
+  name: sandbox1
+- context:
+    cluster: sandbox2
+    namespace: istio-system
+    user: sandbox2usr
+  name: sandbox2
+- context:
+    cluster: sandbox3
+    namespace: istio-system
+    user: sandbox3usr
+  name: sandbox3
+current-context: dev
+kind: Config
+preferences: {}
+users:
+- name: devusr
+  user:
+    token: kubeconfig-u-g7m547s46n:46scz9dmtgkknlkhhf8xs9tpk6tp8fl9t986bpx5hxcqlnkw8lrqgw
+- name: localusr
+  user:
+    token: kubeconfig-user-c5hmdtzgdw:md4h8qqm599727r67zc7zwwdrvrlkmf65slcrt4qvznb2cfjr5t58w
+- name: lz-prod-usr
+  user:
+    token: kubeconfig-u-hn42ymipu7g4dpk:wfb7b6qjpgmg57q8lt5mfcgvslpdwpx9ndjgnf2775h2mcv4mq6rnh
+- name: produsr
+  user:
+    token: kubeconfig-user-cpzrlrwtwz:zrr57tvpwg4fdf9slcvl782p46czjphlbn96pkscmhzswzvh8f7qtp
+- name: qausr
+  user:
+    token: kubeconfig-u-hn42ymipu7rslmw:fj4x47hmdb2hclr5fldvhf55fjc26lpmtvvkvc6b8fljv24g2625m5
+- name: sandbox1usr
+  user:
+    token: kubeconfig-user-xkv8wwp2kj:p79lgjcr2jngwsbwgd5qhgwpjjngjvt7hvbscrsv586q4mzmzp5l89
+- name: sandbox2usr
+  user:
+    token: kubeconfig-user-qr7tp275ck:tftnccjbb7l86k8f2rl4vk9qr2769kshqvm8xcnkvpvfcfpghwzhpv
+- name: sandbox3usr
+  user:
+    token: kubeconfig-user-bkxp65hzrc:258c988547cpnl7ftsgvv5b4qh6fsb9mks9q84d6pxw8jp6lg8xmlj
