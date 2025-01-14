@@ -1,0 +1,31 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: dev.crt
+    server: https://cluster-console.dev.lib.harvard.edu/k8s/clusters/local
+  name: devlocal
+- cluster:
+    certificate-authority: sandbox1.crt
+    server: https://cluster-console.sand.lib.harvard.edu/k8s/clusters/local
+  name: sandbox1
+contexts:
+- context:
+    cluster: devlocal
+    namespace: kafka
+    user: devusr
+  name: dev
+- context:
+    cluster: sandbox1
+    namespace: istio-system
+    user: sandbox1usr
+  name: sandbox1
+current-context: dev
+kind: Config
+preferences: {}
+users:
+- name: devusr
+  user:
+    token: XXXX
+- name: sandbox1usr
+  user:
+    token: YYYY
