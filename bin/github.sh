@@ -24,11 +24,14 @@ git clone git@github.com:harvard-lts/archivesspace-checker-private.git
 
 # git clone git@github.huit.harvard.edu:LTS/argoCD-INFRA.git
 
-git clone git@github.huit.harvard.edu:LTS/aspace-INFRA.git
+echo " --> Aspace "
+git clone git@github.com:harvard-lts/aspace-local.git
 
-git clone git@github.huit.harvard.edu:LTS/bibdatalookup-INFRA.git
+echo " --> Bibdata "
+git clone git@github.huit.harvard.edu:LTS/bibdatalookup.git
 
-git clone git@github.huit.harvard.edu:LTS/booklabeler-INFRA.git
+echo " --> Booklabeler"
+git clone git@github.huit.harvard.edu:LTS/booklabeler.git
 
 git clone git@github.huit.harvard.edu:LTS/curiosity-INFRA.git
 
