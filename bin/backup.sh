@@ -10,7 +10,6 @@ month=`date +%b`
 
 year=`date +%y`
 
-
 echo " --> Creating Month docco $month and $year"
 timeSec=2
 
@@ -127,8 +126,8 @@ echo " --> Copy GRA*"
 cp -R GRA* /Volumes/Data2024/Documents-$month-20$year/
 sleep $timeSec
 
-echo " --> Copy Harvard"
-cp -R HARVARD* /Volumes/Data2024/Documents-$month-20$year/
+echo " --> Copy H*"
+cp -R H* /Volumes/Data2024/Documents-$month-20$year/
 sleep $timeSec
 
 echo " --> Copy ISTIO"
@@ -195,8 +194,17 @@ echo " --> Copy Background"
 cp -R Background* /Volumes/Data2024/Documents-$month-20$year/Pictures
 sleep $timeSec
 
+echo " --> Copy CICD"
+cp -R CICD* /Volumes/Data2024/Documents-$month-20$year/Pictures
+sleep $timeSec
+
+
 echo " --> Copy HARVARD"
 cp -R HARVARD* /Volumes/Data2024/Documents-$month-20$year/Pictures
+sleep $timeSec
+
+echo " --> Copy ISTIO"
+cp -R ISTIO* /Volumes/Data2024/Documents-$month-20$year/Pictures
 sleep $timeSec
 
 echo " ###>> Going to Movies"
