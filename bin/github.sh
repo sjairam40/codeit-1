@@ -33,9 +33,24 @@ git clone git@github.huit.harvard.edu:LTS/bibdatalookup.git
 echo " --> Booklabeler"
 git clone git@github.huit.harvard.edu:LTS/booklabeler.git
 
-git clone git@github.huit.harvard.edu:LTS/curiosity-INFRA.git
+echo " --> Curiosity"
+git clone git@github.com:harvard-lts/CURIOSity.git
 
-git clone git@github.huit.harvard.edu:LTS/DAIS-INFRA.git
+echo " --> DAIS"
+git clone 
+
+echo " --> DRS Tools"
+git clone git@github.huit.harvard.edu:LTS/drstools.git
+
+echo " --> DRS Set Manager"
+git clone git@github.huit.harvard.edu:LTS/drssetmgr.git
+
+echo " --> DRS2 Services"
+git clone git@github.huit.harvard.edu:LTS/drs2_services.git
+
+echo " --> DRS WebAdmin"
+git clone git@github.huit.harvard.edu:LTS/drs2_webadmin.git
+
 
 git clone git@github.huit.harvard.edu:LTS/DRS2-INFRA.git
 
