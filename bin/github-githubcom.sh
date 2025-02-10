@@ -14,7 +14,7 @@ cd ~/Documents/GitHub/
 mkdir GITHUB-COM
 cd GITHUB-COM
 
-echo " --> A to L"
+echo " --> HUIT"
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-app-template-tf-oci.git
 
@@ -27,6 +27,12 @@ git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-module-repo-template-t
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-module-repo-template-tf-oci.git
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-module-repo-template-tf-azurerm.git
+
+echo " --> LTS"
+
+git clone git@github.com:harvard-lts/ga-reusable-workflows.git
+
+git clone git@github.com:harvard-lts/ltsIAC.git
 
 end_time=$(date +%s)
 
