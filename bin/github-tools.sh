@@ -32,6 +32,8 @@ git clone git@github.com:istio/istio.git
 echo " --> jaeger"
 git clone git@github.com:jaegertracing/jaeger.git
 
+echo " --> Krew plugins"
+git clone git@github.com:kubernetes-sigs/krew.git
 
 echo " --> popeye"
 git clone git@github.com:derailed/popeye.git
