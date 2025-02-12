@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Initial version
+
 # Function to clear Safari history and cache
 clear_safari() {
     echo "Clearing Safari history and cache..."
