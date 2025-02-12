@@ -23,11 +23,15 @@ git clone git@github.com:kubernetes-sigs/aws-ebs-csi-driver.git
 echo " --> csi nfs driver"
 git clone git@github.com:kubernetes-csi/csi-driver-nfs.git
 
+echo " --> iamlive"
+git clone git@github.com:iann0036/iamlive.git
+
+echo " --> ISTIO" 
+git clone git@github.com:istio/istio.git
+
 echo " --> jaeger"
 git clone git@github.com:jaegertracing/jaeger.git
 
-echo " --> iamlive"
-git clone git@github.com:iann0036/iamlive.git
 
 echo " --> popeye"
 git clone git@github.com:derailed/popeye.git
