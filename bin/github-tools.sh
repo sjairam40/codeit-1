@@ -23,6 +23,9 @@ git clone git@github.com:kubernetes-sigs/aws-ebs-csi-driver.git
 echo " --> csi nfs driver"
 git clone git@github.com:kubernetes-csi/csi-driver-nfs.git
 
+echo " --> helm "
+git clone git@github.com:helm/helm.git
+
 echo " --> iamlive"
 git clone git@github.com:iann0036/iamlive.git
 
