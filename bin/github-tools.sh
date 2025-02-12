@@ -10,6 +10,9 @@ git clone git@github.com:prometheus/alertmanager.git
 echo " --> argocd"
 git clone git@github.com:argoproj/argo-cd.git
 
+echo " --> csi nfs driver"
+git clone git@github.com:kubernetes-csi/csi-driver-nfs.git
+
 echo " --> jaeger"
 git clone git@github.com:jaegertracing/jaeger.git
 
