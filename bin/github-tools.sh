@@ -13,6 +13,9 @@ git clone git@github.com:argoproj/argo-cd.git
 echo " --> jaeger"
 git clone git@github.com:jaegertracing/jaeger.git
 
+echo " --> iamlive"
+git clone git@github.com:iann0036/iamlive.git
+
 echo " --> popeye"
 git clone git@github.com:derailed/popeye.git
 
