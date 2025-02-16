@@ -5,7 +5,7 @@ fetchstatus() {
     --silent \
     --head \
     --write-out '%{http_code}' \
-    "https://curiosity.lib.harvard.edu"
+    "https://curiosity.dev.lib.harvard.edu"
 }
 
 urlstatus=$(fetchstatus)          # initialize to actual value before we sleep even once
