@@ -14,6 +14,8 @@ const urls = [
     'https://booklabeler-dev.lib.harvard.edu',
     'https://curiosity-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
+    'https://embed-dev.lib.harvard.edu',
+    'https://fts-dev.lib.harvard.edu',    
     'https://cluster-console.dev.lib.harvard.edu',
     // 'https://another-site.com',
 ];
