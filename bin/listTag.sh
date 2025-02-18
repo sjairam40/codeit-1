@@ -2,7 +2,7 @@
 
 # Define the tag key and value to filter by
 TAG_KEY="environment"
-TAG_VALUE="sandbox"
+TAG_VALUE="Development"
 MAX_RESULTS=10
 
 # Function to list secrets with specific tags and handle pagination
