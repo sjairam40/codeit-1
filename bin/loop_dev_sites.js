@@ -18,7 +18,9 @@ const urls = [
     'https://fts-dev.lib.harvard.edu',
     'https://jstor-dev.lib.harvard.edu', 
     'https://hgl-dev.lib.harvard.edu',
+    'https://listview-dev.lib.harvard.edu',    
     'https://cluster-console.dev.lib.harvard.edu',
+    'https://deployment.dev.lib.harvard.edu',
     // 'https://another-site.com',
 ];
 
