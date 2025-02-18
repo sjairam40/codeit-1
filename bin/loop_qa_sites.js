@@ -23,6 +23,7 @@ const urls = [
     'https://listview-qa.lib.harvard.edu',
     'https://mps-qa.lib.harvard.edu/',
     'https://nrs-qa.lib.harvard.edu/',
+    'https://olivia-qa.lib.harvard.edu/olivia/servlet/OliviaServlet',
     'https://pds-qa.lib.harvard.edu/pds/',
     'https://cluster-console.qa.lib.harvard.edu',
     'https://deployment.qa.lib.harvard.edu',
