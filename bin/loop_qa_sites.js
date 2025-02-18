@@ -18,6 +18,7 @@ const urls = [
     'https://embed-qa.lib.harvard.edu',
     'https://fts-qa.lib.harvard.edu',
     'https://geodata-qa.lib.harvard.edu',
+    'https://jstor-qa.lib.harvard.edu',
     'https://hgl-qa.lib.harvard.edu',
     'https://cluster-console.qa.lib.harvard.edu',
     'https://deployment.qa.lib.harvard.edu',
