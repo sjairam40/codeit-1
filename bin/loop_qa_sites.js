@@ -22,6 +22,7 @@ const urls = [
     'https://hgl-qa.lib.harvard.edu',
     'https://listview-qa.lib.harvard.edu',
     'https://mps-qa.lib.harvard.edu/',
+    'https://nrs-qa.lib.harvard.edu/',
     'https://pds-qa.lib.harvard.edu/pds/',
     'https://cluster-console.qa.lib.harvard.edu',
     'https://deployment.qa.lib.harvard.edu',
