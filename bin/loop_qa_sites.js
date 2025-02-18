@@ -20,6 +20,8 @@ const urls = [
     'https://geodata-qa.lib.harvard.edu',
     'https://hgl-qa.lib.harvard.edu',
     'https://cluster-console.qa.lib.harvard.edu',
+    'https://deployment.qa.lib.harvard.edu',
+    'https://logs.qa.lib.harvard.edu/login'
     // 'https://another-site.com',
 ];
 
