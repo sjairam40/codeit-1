@@ -18,6 +18,8 @@ const urls = [
     'https://curiosity-dev.lib.harvard.edu',
     'https://dims-dev.lib.harvard.edu/readiness',
     'https://drs2-services-dev.hul.harvard.edu/',
+    'https://drs2-dev.hul.harvard.edu',
+    'https://drs2-dev.hul.harvard.edu/drs2_webadmin/search',
     'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
     'https://embed-dev.lib.harvard.edu',
