@@ -21,6 +21,7 @@ const urls = [
     'https://drs2-services-dev.hul.harvard.edu/',
     'https://drs2-dev.hul.harvard.edu',
     'https://drs2-dev.hul.harvard.edu/drs2_webadmin/search',
+    'https://drsmdsrv-dev.lib.harvard.edu/drs_metadata/rest/heartbeat',         //MDS
     'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
     'https://embed-dev.lib.harvard.edu',
