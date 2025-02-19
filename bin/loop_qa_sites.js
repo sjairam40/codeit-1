@@ -3,7 +3,7 @@ import { sleep } from 'k6';
 
 export let options = {
     vus: 1,           // Number of virtual users
-    duration: '10s',  // Duration of the test
+    duration: '20s',  // Duration of the test
 };
 
 const urls = [ 
@@ -21,8 +21,9 @@ const urls = [
     'https://embed-qa.lib.harvard.edu',
     'https://fts-qa.lib.harvard.edu',
     'https://geodata-qa.lib.harvard.edu',
-    'https://jstor-qa.lib.harvard.edu',
     'https://hgl-qa.lib.harvard.edu',
+    'https://ids-qa.lib.harvard.edu',
+    'https://jstor-qa.lib.harvard.edu',
     'https://listview-qa.lib.harvard.edu',
     'https://mps-qa.lib.harvard.edu/',
     'https://nrs-qa.lib.harvard.edu/',
