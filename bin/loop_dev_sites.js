@@ -9,6 +9,7 @@ export let options = {
 const urls = [ 
     'https://acorn-dev.lib.harvard.edu/records/list',
     'https://arclight-dev.lib.harvard.edu/',
+    'https://api-dev.lib.harvard.edu/v2/items',      //LibraryCloud
     'https://aspace-dev.lib.harvard.edu',
     'https://aspaceapi-dev.lib.harvard.edu',
     'https://aspacepui-dev.lib.harvard.edu',
@@ -29,8 +30,8 @@ const urls = [
     'https://iiif-dev.lib.harvard.edu',         //IDS
     'https://jstor-dev.lib.harvard.edu', 
     'https://jobmon-dev.lib.harvard.edu',
-    'https://lc-tools-dev.lib.harvard.edu/oai/?verb=ListSets',
-    'https://lc-tools-dev.lib.harvard.edu/csv/',
+    'https://lc-tools-dev.lib.harvard.edu/oai/?verb=ListSets',      //LibraryCloud
+    'https://lc-tools-dev.lib.harvard.edu/csv/',                    //LibraryCloud
     'https://listview-dev.lib.harvard.edu',
     'https://mps-dev.lib.harvard.edu/',
     'https://pds-dev.lib.harvard.edu',          //IDS
