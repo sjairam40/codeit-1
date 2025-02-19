@@ -13,6 +13,7 @@ const urls = [
     'https://bibdata-dev.lib.harvard.edu',
     'https://booklabeler-dev.lib.harvard.edu',
     'https://curiosity-dev.lib.harvard.edu',
+    'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
     'https://embed-dev.lib.harvard.edu',
     'https://fts-dev.lib.harvard.edu',

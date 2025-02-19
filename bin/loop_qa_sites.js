@@ -9,6 +9,7 @@ export let options = {
 const urls = [ 
     'https://acorn-qa.lib.harvard.edu/records/list',
     'https://arclight-qa.lib.harvard.edu/',
+    'https://api-qa.lib.harvard.edu/v2/items',
     'https://aspace-qa.lib.harvard.edu',
     'https://bibdata-qa.lib.harvard.edu',
     'https://booklabeler-dev.lib.harvard.edu',
