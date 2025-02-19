@@ -9,12 +9,12 @@ export let options = {
 const urls = [ 
     'https://acorn-qa.lib.harvard.edu/records/list',
     'https://arclight-qa.lib.harvard.edu/',
-    'https://api-qa.lib.harvard.edu/v2/items',      //LibraryCloud
+    'https://api-qa.lib.harvard.edu/v2/items',                      //LibraryCloud
     'https://aspace-qa.lib.harvard.edu',
     'https://aspaceapi-qa.lib.harvard.edu',
     'https://aspacepui-qa.lib.harvard.edu/',
     'https://bibdata-qa.lib.harvard.edu',
-    'https://booklabeler-dev.lib.harvard.edu',
+    'https://booklabeler-qa.lib.harvard.edu',
     'https://curiosity-qa.lib.harvard.edu',
     'https://dims-qa.lib.harvard.edu/readiness',
     'https://eda-qa.lib.harvard.edu',   
@@ -28,8 +28,14 @@ const urls = [
     'https://lc-tools-qa.lib.harvard.edu/oai/?verb=ListSets',       //LibraryCloud
     'https://lc-tools-qa.lib.harvard.edu/csv/',                    //LibraryCloud  
     'https://listview-qa.lib.harvard.edu',
-    'https://mps-qa.lib.harvard.edu/',
-    'https://nrs-qa.lib.harvard.edu/',
+    'https://lts-pipelines-qa.lib.harvard.edu/login',
+    'https://mps-qa.lib.harvard.edu/assets/images/DRS:401074141/full/1200,1200/0/default.jpg', 
+    'https://mps-qa.lib.harvard.edu/assets/image/DRS:400483064',
+    'https://mps-qa.lib.harvard.edu/sds/audio/401065821',
+    'https://nrsadmin-qa.lib.harvard.edu/resources/search/advanced',
+    'https://nrsadmin-api-qa.lib.harvard.edu',
+    'https://nrs-qa.lib.harvard.edu/URN-3:HUL.OIS:726231:MANIFEST:3',
+    'https://nrs-qa.lib.harvard.edu/URN-3:HUL.OIS:726231:MANIFEST:2',
     'https://olivia-qa.lib.harvard.edu/olivia/servlet/OliviaServlet',
     'https://pds-qa.lib.harvard.edu/pds/',
     'https://cluster-console.qa.lib.harvard.edu',
