@@ -14,6 +14,7 @@ const urls = [
     'https://aspacepui-dev.lib.harvard.edu',
     'https://bibdata-dev.lib.harvard.edu',
     'https://booklabeler-dev.lib.harvard.edu',
+    'https://collex-dev.lib.harvard.edu',
     'https://curiosity-dev.lib.harvard.edu',
     'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
