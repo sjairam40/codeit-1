@@ -17,6 +17,7 @@ const urls = [
     'https://collex-dev.lib.harvard.edu',
     'https://curiosity-dev.lib.harvard.edu',
     'https://dims-dev.lib.harvard.edu/readiness',
+    'https://drs2-services-dev.hul.harvard.edu/',
     'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
     'https://embed-dev.lib.harvard.edu',
