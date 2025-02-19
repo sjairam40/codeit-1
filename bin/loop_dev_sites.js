@@ -16,6 +16,7 @@ const urls = [
     'https://booklabeler-dev.lib.harvard.edu',
     'https://collex-dev.lib.harvard.edu',
     'https://curiosity-dev.lib.harvard.edu',
+    'https://dims-dev.lib.harvard.edu',
     'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
     'https://embed-dev.lib.harvard.edu',
