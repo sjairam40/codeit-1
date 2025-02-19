@@ -38,6 +38,9 @@ const urls = [
     'https://nrs-qa.lib.harvard.edu/URN-3:HUL.OIS:726231:MANIFEST:2',
     'https://olivia-qa.lib.harvard.edu/olivia/servlet/OliviaServlet',
     'https://pds-qa.lib.harvard.edu/pds/',
+    'https://policyadmin-qa.lib.harvard.edu/policy/servlet/admin',
+    'https://viewer-qa.lib.harvard.edu',                           //Viewer
+    'https://webservices-qa.lib.harvard.edu/rest/v3/hollis/barcode/32044051654705',     //Presto
     'https://cluster-console.qa.lib.harvard.edu',
     'https://deployment.qa.lib.harvard.edu',
     'https://logs.qa.lib.harvard.edu/login'
