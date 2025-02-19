@@ -3,27 +3,30 @@ import { sleep } from 'k6';
 
 export let options = {
     vus: 1,           // Number of virtual users
-    duration: '20s',  // Duration of the test
+    duration: '60s',  // Duration of the test
 };
 
 const urls = [ 
     'https://acorn-qa.lib.harvard.edu/records/list',
     'https://arclight-qa.lib.harvard.edu/',
-    'https://api-qa.lib.harvard.edu/v2/items',
+    'https://api-qa.lib.harvard.edu/v2/items',      //LibraryCloud
     'https://aspace-qa.lib.harvard.edu',
     'https://aspaceapi-qa.lib.harvard.edu',
     'https://aspacepui-qa.lib.harvard.edu/',
     'https://bibdata-qa.lib.harvard.edu',
     'https://booklabeler-dev.lib.harvard.edu',
     'https://curiosity-qa.lib.harvard.edu',
-    'https://dims-qa.lib.harvard.edu',
-    'https://eda-qa.lib.harvard.edu',
-    'https://embed-qa.lib.harvard.edu',
+    'https://dims-qa.lib.harvard.edu/readiness',
+    'https://eda-qa.lib.harvard.edu',   
+    'https://embed-qa.lib.harvard.edu',                            //Viewer
     'https://fts-qa.lib.harvard.edu',
     'https://geodata-qa.lib.harvard.edu',
     'https://hgl-qa.lib.harvard.edu',
-    'https://ids-qa.lib.harvard.edu',
+    'https://ids-qa.lib.harvard.edu/ids/view/401656372',
+    'https://jobmon-qa.lib.harvard.edu',
     'https://jstor-qa.lib.harvard.edu',
+    'https://lc-tools-qa.lib.harvard.edu/oai/?verb=ListSets',       //LibraryCloud
+    'https://lc-tools-qa.lib.harvard.edu/csv/',                    //LibraryCloud  
     'https://listview-qa.lib.harvard.edu',
     'https://mps-qa.lib.harvard.edu/',
     'https://nrs-qa.lib.harvard.edu/',
