@@ -35,7 +35,8 @@ const urls = [
     'https://lc-tools-dev.lib.harvard.edu/csv/',                    //LibraryCloud
     'https://listview-dev.lib.harvard.edu',
     'https://lts-pipelines-dev.lib.harvard.edu/login',
-    'https://mps-dev.lib.harvard.edu/',
+    'https://mps-dev.lib.harvard.edu/assets/images/drs:400008794/full/full/0/default.jpg',
+    'https://mps-dev.lib.harvard.edu/assets/image/DRS:400013059/full/full/0/default.jpg',
     'https://pds-dev.lib.harvard.edu',          //IDS
     'https://tools-dev.lib.harvard.edu',  
     'https://cluster-console.dev.lib.harvard.edu',
