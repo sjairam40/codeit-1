@@ -10,6 +10,7 @@ const urls = [
     'https://acorn-dev.lib.harvard.edu/records/list',
     'https://arclight-dev.lib.harvard.edu/',
     'https://aspace-dev.lib.harvard.edu',
+    'https://aspaceapi-dev.lib.harvard.edu',   
     'https://bibdata-dev.lib.harvard.edu',
     'https://booklabeler-dev.lib.harvard.edu',
     'https://curiosity-dev.lib.harvard.edu',
