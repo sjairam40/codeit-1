@@ -3,7 +3,7 @@ import { sleep } from 'k6';
 
 export let options = {
     vus: 1,           // Number of virtual users
-    duration: '20s',  // Duration of the test
+    duration: '40s',  // Duration of the test
 };
 
 const urls = [ 
@@ -37,6 +37,8 @@ const urls = [
     'https://lts-pipelines-dev.lib.harvard.edu/login',
     'https://mps-dev.lib.harvard.edu/assets/images/drs:400008794/full/full/0/default.jpg',
     'https://mps-dev.lib.harvard.edu/assets/image/DRS:400013059/full/full/0/default.jpg',
+    'https://nrs-dev.lib.harvard.edu/URN-3:HUL.OIS:1254828:MANIFEST:2',
+    'https://nrs-dev.lib.harvard.edu/URN-3:HUL.OIS:1254828:MANIFEST:3',
     'https://pds-dev.lib.harvard.edu',          //IDS
     'https://tools-dev.lib.harvard.edu',  
     'https://cluster-console.dev.lib.harvard.edu',
