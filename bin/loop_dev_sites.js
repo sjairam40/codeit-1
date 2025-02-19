@@ -3,7 +3,7 @@ import { sleep } from 'k6';
 
 export let options = {
     vus: 1,           // Number of virtual users
-    duration: '40s',  // Duration of the test
+    duration: '60s',  // Duration of the test
 };
 
 const urls = [ 
@@ -37,11 +37,17 @@ const urls = [
     'https://lts-pipelines-dev.lib.harvard.edu/login',
     'https://mps-dev.lib.harvard.edu/assets/images/drs:400008794/full/full/0/default.jpg',
     'https://mps-dev.lib.harvard.edu/assets/image/DRS:400013059/full/full/0/default.jpg',
+    'https://nrsadmin-dev.lib.harvard.edu/resources/search/advanced',
+    'https://nrsadmin-api-dev.lib.harvard.edu',
     'https://nrs-dev.lib.harvard.edu/URN-3:HUL.OIS:1254828:MANIFEST:2',
     'https://nrs-dev.lib.harvard.edu/URN-3:HUL.OIS:1254828:MANIFEST:3',
+    'https://olivia-dev.lib.harvard.edu/olivia/servlet/OliviaServlet?storedProcedure=getUrn&callingApplication=call1&oracleID=400299701',
     'https://pds-dev.lib.harvard.edu',          //IDS
+    'https://policyadmin-dev.lib.harvard.edu/policy/servlet/admin',
     'https://tools-dev.lib.harvard.edu',
     'https://viewer-dev.lib.harvard.edu',                           //Viewer  
+    'https://webservices-dev.lib.harvard.edu/rest/v3/hollis/barcode/32044051654705',    //Presto
+    'https://whistle-dev.lib.harvard.edu',
     'https://cluster-console.dev.lib.harvard.edu',
     'https://deployment.dev.lib.harvard.edu',
     // 'https://another-site.com',
