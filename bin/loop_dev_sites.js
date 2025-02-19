@@ -24,7 +24,7 @@ const urls = [
     'https://drsmdsrv-dev.lib.harvard.edu/drs_metadata/rest/heartbeat',         //MDS
     'https://eadchecker-dev.lib.harvard.edu',
     'https://eda-dev.lib.harvard.edu',
-    'https://embed-dev.lib.harvard.edu',
+    'https://embed-dev.lib.harvard.edu',                            //Viewer
     'https://fts-dev.lib.harvard.edu',
     'https://hgl-dev.lib.harvard.edu',
     'https://ids-dev.lib.harvard.edu/ids/view/400013131',
@@ -40,7 +40,8 @@ const urls = [
     'https://nrs-dev.lib.harvard.edu/URN-3:HUL.OIS:1254828:MANIFEST:2',
     'https://nrs-dev.lib.harvard.edu/URN-3:HUL.OIS:1254828:MANIFEST:3',
     'https://pds-dev.lib.harvard.edu',          //IDS
-    'https://tools-dev.lib.harvard.edu',  
+    'https://tools-dev.lib.harvard.edu',
+    'https://viewer-dev.lib.harvard.edu',                           //Viewer  
     'https://cluster-console.dev.lib.harvard.edu',
     'https://deployment.dev.lib.harvard.edu',
     // 'https://another-site.com',
