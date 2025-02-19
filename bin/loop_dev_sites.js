@@ -33,6 +33,7 @@ const urls = [
     'https://lc-tools-dev.lib.harvard.edu/oai/?verb=ListSets',      //LibraryCloud
     'https://lc-tools-dev.lib.harvard.edu/csv/',                    //LibraryCloud
     'https://listview-dev.lib.harvard.edu',
+    'https://lts-pipelines-dev.lib.harvard.edu/login',
     'https://mps-dev.lib.harvard.edu/',
     'https://pds-dev.lib.harvard.edu',          //IDS
     'https://tools-dev.lib.harvard.edu',  
