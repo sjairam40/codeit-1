@@ -26,6 +26,7 @@ const urls = [
     'https://fts-dev.lib.harvard.edu',
     'https://hgl-dev.lib.harvard.edu',
     'https://ids-dev.lib.harvard.edu',
+    'https://iiif-dev.lib.harvard.edu',
     'https://jstor-dev.lib.harvard.edu', 
     'https://listview-dev.lib.harvard.edu',
     'https://mps-dev.lib.harvard.edu/',
