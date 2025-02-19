@@ -29,6 +29,8 @@ const urls = [
     'https://iiif-dev.lib.harvard.edu',         //IDS
     'https://jstor-dev.lib.harvard.edu', 
     'https://jobmon-dev.lib.harvard.edu',
+    'https://lc-tools-dev.lib.harvard.edu/oai/?verb=ListSets',
+    'https://lc-tools-dev.lib.harvard.edu/csv/',
     'https://listview-dev.lib.harvard.edu',
     'https://mps-dev.lib.harvard.edu/',
     'https://pds-dev.lib.harvard.edu',          //IDS
