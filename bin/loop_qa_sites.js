@@ -11,6 +11,8 @@ const urls = [
     'https://arclight-qa.lib.harvard.edu/',
     'https://api-qa.lib.harvard.edu/v2/items',
     'https://aspace-qa.lib.harvard.edu',
+    'https://aspaceapi-qa.lib.harvard.edu',
+    'https://aspacepui-qa.lib.harvard.edu/',
     'https://bibdata-qa.lib.harvard.edu',
     'https://booklabeler-dev.lib.harvard.edu',
     'https://curiosity-qa.lib.harvard.edu',
