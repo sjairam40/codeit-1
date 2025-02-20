@@ -32,6 +32,8 @@ const urls = [
     'https://mps-qa.lib.harvard.edu/assets/images/DRS:401074141/full/1200,1200/0/default.jpg', 
     'https://mps-qa.lib.harvard.edu/assets/image/DRS:400483064',
     'https://mps-qa.lib.harvard.edu/sds/audio/401065821',
+    'https://mps-qa.lib.harvard.edu/sds/audio/402349903',           //SDS Audio
+    'https://mps-qa.lib.harvard.edu/sds/video/402164813',           //SDS Video
     'https://nrsadmin-qa.lib.harvard.edu/resources/search/advanced',
     'https://nrsadmin-api-qa.lib.harvard.edu',
     'https://nrs-qa.lib.harvard.edu/URN-3:HUL.OIS:726231:MANIFEST:3',
