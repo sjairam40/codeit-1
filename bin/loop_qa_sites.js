@@ -19,10 +19,12 @@ const urls = [
     'https://dims-qa.lib.harvard.edu/readiness',
     'https://eda-qa.lib.harvard.edu',   
     'https://embed-qa.lib.harvard.edu',                            //Viewer
+    'https://fds-qa.lib.harvard.edu',
     'https://fts-qa.lib.harvard.edu',
     'https://geodata-qa.lib.harvard.edu',
     'https://hgl-qa.lib.harvard.edu',
     'https://ids-qa.lib.harvard.edu/ids/view/401656372',
+    'https://inlib-adm-qa.lts.harvard.edu/',                        //MPS - inlib
     'https://jobmon-qa.lib.harvard.edu',
     'https://jstor-qa.lib.harvard.edu',
     'https://lc-tools-qa.lib.harvard.edu/oai/?verb=ListSets',       //LibraryCloud
