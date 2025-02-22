@@ -9,12 +9,12 @@ echo " -->  Goto ARGOCD"
 cd ~/Documents/ARGOCD/
 sleep $timeSec
 
-echo " -->  Goto SANDBOX1"
-cd ~/Documents/ARGOCD/SANDBOX1
+echo " -->  Goto DEV"
+cd ~/Documents/ARGOCD/DEV
 sleep $timeSec
 
-echo " -->  Goto SANDBOX1 / Working Session"
-cd ~/Documents/ARGOCD/SANDBOX1/WorkingSession
+echo " -->  Goto DEV / Jason-Tom"
+cd ~/Documents/ARGOCD/DEV/Jason-Tom
 sleep $timeSec
 
 echo " --> Apply ConfigMaps"
