@@ -1,0 +1,54 @@
+kind: TestWorkflow
+apiVersion: testworkflows.testkube.io/v1
+metadata:
+  name: k6-sample
+  namespace: testkube
+  labels:
+    docs: example
+spec:
+  content:
+    files:
+      - path: /data/example.js
+        content: |-
+          import http from 'k6/http';
+          import { sleep } from 'k6';
+          export let options = {
+              vus: 1,           // Number of virtual users
+              duration: '60s',  // Duration of the test
+          };
+          const urls = [ 
+              'https://acorn-dev.lib.harvard.edu/records/list',
+              'https://arclight-dev.lib.harvard.edu/',
+              'https://api-dev.lib.harvard.edu/v2/items',      //LibraryCloud
+              'https://aspace-dev.lib.harvard.edu',
+              'https://aspaceapi-dev.lib.harvard.edu',
+              'https://aspacepui-dev.lib.harvard.edu',
+              'https://bibdata-dev.lib.harvard.edu',
+              'https://booklabeler-dev.lib.harvard.edu',
+              'https://collex-dev.lib.harvard.edu',
+              'https://curiosity-dev.lib.harvard.edu',
+          ];
+
+          export default function () {
+              for (let url of urls) {
+                  let response = http.get(url);
+                  console.log(`Response time for ${url}: ${response.timings.duration} ms`);
+                  sleep(1);  // Wait for 1 second between requests
+              };
+          };
+  steps:
+    - name: Run Tests
+      workingDir: /data
+      run:
+        image: grafana/k6:0.49.0
+        env:
+          - name: K6_WEB_DASHBOARD
+            value: 'true'
+          - name: K6_WEB_DASHBOARD_EXPORT
+            value: k6-test-report.html
+        args:
+          - run
+          - example.js
+      artifacts:
+        paths:
+          - k6-test-report.html
