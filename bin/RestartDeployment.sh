@@ -12,3 +12,7 @@ DEPLOYMENT_NAME=$1
 
 # Restart the specified deployment
 kubectl rollout restart deployment "$DEPLOYMENT_NAME"
+
+sleep 2
+
+kubectl get pods -w
