@@ -7,8 +7,6 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-clear
-
 # Assign the first argument to the POD_NAME variable
 POD_NAME=$1
 
