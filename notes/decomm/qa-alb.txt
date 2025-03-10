@@ -10,6 +10,9 @@ EDA-QA                      || EDA-QA                       09/10/24
 EDA-SOLR-QA                 || EDA-SOLR-QA                  08/11/24
 drsmdsrv-QA                 || drsmdsrv-qa                  10/10/24
 DATABOARD QA                || DATBOARD-QA-10401            13/11/24
+DASH-QA                     || DASH-QA-PROXY                10/03/25
+DASHV7-API-DEMO-QA          || DASHV7-API-DEMO-QA           10/03/25
+DASHV7-DEMO-QA              || DASHv7-demo                  10/03/25
 DCP-QA                      || dcp-qa                       09/10/24
 DOCKERISED TOOLS QA         ||                              09/10/24
 DRS-MESSAGE-QA              || DRS-MESSAGE-QA               18/11/24
