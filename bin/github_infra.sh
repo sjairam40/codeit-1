@@ -8,6 +8,8 @@ year=`date +%y`
 
 clear
 
+timeSec=2
+
 echo " ==>> Creating repos "
 
 cd ~/Documents/GitHub/
@@ -17,68 +19,99 @@ cd APPS-INFRA
 echo " --> A to L"
 
 git clone git@github.huit.harvard.edu:LTS/ACORN-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/application-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/aqueduct-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/archecker-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/argoCD-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/aspace-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/bibdatalookup-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/booklabeler-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/curiosity-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/DAIS-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/DRS2-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/devsecops-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/fts-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/HDForms-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/hgl-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/IDS-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/imgconv-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/jobmonitor-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/JSTOR-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/LISTVIEW-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/lts-pipelines-INFRA.git
+sleep $timeSec
 
 echo " --> M to Z"
 
 git clone git@github.huit.harvard.edu:LTS/mds-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/mps-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/mpsadm-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/nrs-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/nrsadm-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/olivia-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/policy-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/presto-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/SDS-and-Wowza-INFRA.git
+sleep $timeSec
 
 git clone git@github.huit.harvard.edu:LTS/viewer-INFRA.git
+sleep $timeSec
 
 end_time=$(date +%s)
 
