@@ -20,6 +20,8 @@ git clone git@github.huit.harvard.edu:LTS/ACORN-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/application-INFRA.git
 
+git clone git@github.huit.harvard.edu:LTS/aqueduct-INFRA.git
+
 git clone git@github.huit.harvard.edu:LTS/archecker-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/argoCD-INFRA.git
@@ -75,8 +77,6 @@ git clone git@github.huit.harvard.edu:LTS/policy-INFRA.git
 git clone git@github.huit.harvard.edu:LTS/presto-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/SDS-and-Wowza-INFRA.git
-
-git clone git@github.huit.harvard.edu:LTS/talkwithhollis-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/viewer-INFRA.git
 
