@@ -18,6 +18,8 @@ echo " --> A to L"
 
 git clone git@github.huit.harvard.edu:LTS/ACORN-INFRA.git
 
+git clone git@github.huit.harvard.edu:LTS/application-INFRA.git
+
 git clone git@github.huit.harvard.edu:LTS/archecker-INFRA.git
 
 git clone git@github.huit.harvard.edu:LTS/argoCD-INFRA.git
