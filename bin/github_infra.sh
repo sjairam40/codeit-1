@@ -101,6 +101,9 @@ sleep $timeSec
 git clone git@github.huit.harvard.edu:LTS/olivia-INFRA.git
 sleep $timeSec
 
+git clone git@github.huit.harvard.edu:LTS/OCFL-Validator-Infra.git
+sleep $timeSec
+
 git clone git@github.huit.harvard.edu:LTS/policy-INFRA.git
 sleep $timeSec
 
