@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# This script lists all SQS queues and prints the approximate message count for each
+
+AWS=$(command -v aws)
+
+if [ ! -f "${AWS}" ]; then
+    echo "ERROR: The aws binary does not exist."
+    echo "FIX: Please modify the \${AWS} variable in the program header."
+    exit 1
+fi
+
+# Retrieve all SQS queue URLs
+queue_urls=$(aws sqs list-queues --query 'QueueUrls[*]' --output text)
+
+echo "Fetching SQS queue depths..."
+echo "Queue URL, Approximate Number of Messages"
+
+# Iterate over each queue URL and fetch the approximate message count
+for queue_url in $queue_urls; do
+  # Get the approximate number of messages
+  message_count=$(aws sqs get-queue-attributes --queue-url $queue_url --attribute-names ApproximateNumberOfMessages --query 'Attributes.ApproximateNumberOfMessages' --output text)
+  
+  # Print the queue URL and its message count
+  echo "$queue_url, $message_count"
+done

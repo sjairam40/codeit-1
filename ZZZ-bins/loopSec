@@ -1,0 +1,22 @@
+
+#!/bin/bash
+
+newDate=`date '+%Y-%m-%d' `
+
+echo $newDate
+
+mkdir secrets-`date '+%Y-%m-%d' `
+
+cd secrets-$newDate
+
+ # List of Kubernetes resources 
+
+resources=("acorn" "arclight" "aqueduct" "aspace" "bibdatalookup" "booklabeler" "collex" "curiosity" "dais" "drs" "drs-validator" "eda" "etd" "fts" "hdforms" "hgl" "ids" "imgconv" "jstor" "jobmonitor" "librarycloud" "listview" "lts-pipelines" "mds" "mps" "mps-viewer" "mpsadm" "nrs" "murner" "nrsadm" "olivia" "policy" "presto" "sds" "talkwithhollis" "whistle")  
+# Iterate over each resource 
+
+for resource in "${resources[@]}"; 
+	do echo "--> Change NS to: $resource"
+	kubens "$resource"
+	echo "--> Dump secret"
+	kubectl get secret aws-secret -o yaml >> $resource-secret.yaml
+done

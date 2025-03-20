@@ -1,0 +1,15 @@
+#!/bin/sh
+fetchstatus() {
+  curl \
+    -o /dev/null \
+    --silent \
+    --head \
+    --write-out '%{http_code}' \
+    "https://curiosity.dev.lib.harvard.edu"
+}
+
+urlstatus=$(fetchstatus)          # initialize to actual value before we sleep even once
+until [ "$urlstatus" = 200 ]; do  # until our result is success...
+  sleep 1                         # wait a second...
+  urlstatus=$(fetchstatus)        # then poll again.
+done

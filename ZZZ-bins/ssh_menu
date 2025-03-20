@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+# Extract hosts from SSH config
+HOSTS=$(grep "Host" ~/.ssh/config | grep -vE "HostName|Hostname|no" | awk '{print $2}' | sort -h | sed -E "/\*/d")
+
+# Build dialog menu options dynamically
+MENU_OPTIONS=""
+COUNT=1
+declare -A HOST_MAP  # Map for storing numbered options
+while read -r HOST; do
+    MENU_OPTIONS+="$COUNT \"$HOST\" "
+    HOST_MAP["$COUNT"]="$HOST"
+    ((COUNT++))
+done <<< "$HOSTS"
+
+# Show dialog menu
+MACHINE=$(dialog --menu "Welcome! sanj\nSelect Machine for Login:" 0 0 0 $MENU_OPTIONS 3>&1 1>&2 2>&3 3>&-)
+clear
+# If a valid selection was made, SSH into the selected host
+if [[ -n "$MACHINE" ]]; then
+    ssh "${HOST_MAP[$MACHINE]}"
+    exit
+else
+    echo "No machine selected. Exiting..."
+    exit 1
+fi
