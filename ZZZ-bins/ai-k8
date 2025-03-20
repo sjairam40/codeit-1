@@ -1,1 +1,0 @@
-K8sgpt analyze -o json - explain - filter=Pod | jq .
