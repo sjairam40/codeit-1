@@ -14,7 +14,9 @@ DRS-METADATADELIVERYSRV-PROD ||  DRSMDSRV-PROD-HTTP                             
 EADCHECKER-PROD              ||  EADCHECKER-PROD-DOCKER
 EDA-IIP-PROD                 ||  EDA-IIP-PROD                                   - 24/10/24
 EDA-PROD                     ||  EDA-PROD-DOCKER                                - 24/10/24
-FTS-PROD                     ||  FTS-PROD                   - 10/09/24
+feedback-prod                ||  feedback-prod                                  - 20/03/25
+FEEDBACK-PROD                ||  FEEDBACK-PROD                                  - 20/03/25
+FTS-PROD                     ||  FTS-PROD                                       - 10/09/24
                              ||  FTS-PROD-10087
 
 IDS-PROD                     ||  IDS-PROD-HTTPS                                 - 22/10/24
