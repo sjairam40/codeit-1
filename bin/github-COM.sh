@@ -8,31 +8,41 @@ year=`date +%y`
 
 clear
 
-echo " ==>> Creating repos "
+timeSec=2
 
+echo " => Creating GITHUB "
 cd ~/Documents/GitHub/
 mkdir GITHUB-COM
+
 cd GITHUB-COM
 
+echo " ==>> Creating repos "
 echo " --> HUIT"
-
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-app-template-tf-oci.git
+sleep $timeSec
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-app-template-tf-aws.git
+sleep $timeSec
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-app-template-tf-azurerm.git
+sleep $timeSec
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-module-repo-template-tf-aws.git
+sleep $timeSec
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-module-repo-template-tf-oci.git
+sleep $timeSec
 
 git clone git@github.com:HUIT-Cloud-Architecture/hcdo-cto-module-repo-template-tf-azurerm.git
+sleep $timeSec
 
 echo " --> LTS"
 
 git clone git@github.com:harvard-lts/ga-reusable-workflows.git
+sleep $timeSec
 
 git clone git@github.com:harvard-lts/ltsIAC.git
+sleep $timeSec
 
 end_time=$(date +%s)
 
