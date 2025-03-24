@@ -549,10 +549,10 @@ checkOS ()
 {
 
     if [[ $(uname -m) == 'arm64' ]]; then
-        echo " --> buenos dias, en macOS "
+        echo " --> good morning , on macOS "
         macOS="TRUE"
     else
-        echo " --> ola, en windows "
+        echo " --> hello, on windows "
         macOS="FALSE"
         
     fi
