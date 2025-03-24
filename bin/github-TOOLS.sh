@@ -10,12 +10,13 @@ clear
 
 timeSec=2
 
-echo " ==>> Creating repos "
-
+echo " => Creating TOOLS "
 cd ~/Documents/GitHub/
 mkdir TOOLS
+
 cd TOOLS
 
+echo " ==>> Creating repos "
 echo "  --> alertmanager "
 git clone git@github.com:prometheus/alertmanager.git
 sleep $timeSec
