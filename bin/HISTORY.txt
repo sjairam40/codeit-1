@@ -1,6 +1,11 @@
-
 MARCH 2025
 ----------
 20250314 - CATCHINGTHEWAVE ALB & TG removed
+20250318 - Upgrade ESO 0.12 - LZPROD
 20250319 - DASHv7 ALB removed in DEV
 20250320 - FEEDBACK-PROD and feedback-prod removed in PROD
+
+20250325 - Stopped drs-futures (postgres) - DEV
+           Stopped hdcdev (postgres) - DEV
+
+20250326 - Upgraded ESO 0.12 - PROD
