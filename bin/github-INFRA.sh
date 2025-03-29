@@ -12,7 +12,7 @@ timeSec=2
 
 echo " ==>> Creating repos "
 
-cd ~/Documents/GitHub/
+cd ~/Documents/GitHub/HUIT/
 mkdir APPS-INFRA
 cd APPS-INFRA
 
